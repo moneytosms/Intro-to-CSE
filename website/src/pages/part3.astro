@@ -1,0 +1,332 @@
+---
+// Part 3 page - Finding Your People + Long-Term Tools
+import Layout from '@/layouts/Layout.astro';
+import TableOfContents from '@/components/TableOfContents.astro';
+
+const headings = [
+  { depth: 2, slug: 'finding-your-first-cs-community', text: 'Finding Your First CS Community' },
+  { depth: 3, slug: 'college-clubs-and-hackathons', text: 'College Clubs and Hackathons' },
+  { depth: 3, slug: 'discord-servers-github-orgs-and-forums', text: 'Discord Servers, GitHub Orgs, and Forums' },
+  { depth: 3, slug: 'attending-meetups-and-online-events', text: 'Attending Meetups and Online Events' },
+  { depth: 3, slug: 'what-to-expect-as-a-beginner', text: 'What to Expect as a Beginner in Tech Spaces' },
+  { depth: 2, slug: 'tools-and-resources', text: 'Tools and Resources' },
+  { depth: 3, slug: 'learning-platforms', text: "Learning Platforms That Don't Suck" },
+  { depth: 3, slug: 'tools-that-keep-showing-up', text: "Tools That'll Keep Showing Up" },
+  { depth: 3, slug: 'useful-websites', text: 'Useful Websites' },
+  { depth: 2, slug: 'student-discounts-and-freebies', text: 'Student Discounts and Freebies' },
+  { depth: 3, slug: 'dev-tools', text: 'Dev Tools' },
+  { depth: 3, slug: 'cloud-and-infra', text: 'Cloud and Infra' },
+  { depth: 3, slug: 'design-docs-and-planning', text: 'Design, Docs, and Planning' },
+];
+---
+
+<Layout title="Part 3: Finding Your People + Long-Term Tools - CSE Degree Guide">
+  <div class="container max-w-screen-2xl">
+    <!-- Navigation breadcrumb -->
+    <div class="py-4">
+      <nav class="flex items-center space-x-2 text-sm text-muted-foreground">
+        <a href="/" class="hover:text-foreground transition-colors">Home</a>
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m9 18 6-6-6-6"></path>
+        </svg>
+        <span class="font-medium text-foreground">Part 3: Finding Your People + Long-Term Tools</span>
+      </nav>
+    </div>
+    
+    <div class="flex flex-1 gap-6 md:gap-10">
+      <!-- Main content -->
+      <main class="flex-1 min-w-0">
+        <div class="prose prose-gray dark:prose-invert max-w-none">
+          <div class="mb-8 space-y-4">
+            <h1 class="text-4xl font-bold tracking-tight lg:text-5xl">
+              Part 3: Finding Your People + Long-Term Tools
+            </h1>
+            <p class="text-xl text-muted-foreground">
+              Connect with the CS community and discover the tools that'll serve you throughout your entire journey.
+            </p>
+          </div>
+
+          <h2 id="finding-your-first-cs-community">9. Finding Your First CS Community</h2>
+
+          <p>You don't need to wait until you're a "good programmer" to join the community. In fact, the earlier you do, the better. Whether you're looking to make friends, collaborate on projects, or just lurk and learn, there's a space for you.</p>
+
+          <h3 id="college-clubs-and-hackathons">College Clubs and Hackathons</h3>
+
+          <p>Your college is full of tech clubs: coding clubs, robotics teams, cybersecurity groups, and maybe even a club dedicated to memes with literature on the side.</p>
+
+          <p>These clubs often:</p>
+          <ul>
+            <li>Host workshops, CTFs (capture the flag events), or coding contests</li>
+            <li>Let you collaborate on small internal projects</li>
+            <li>Expose you to new tech beyond your curriculum</li>
+          </ul>
+
+          <p>Hackathons are also a great entry point. Think of them as a coding sprint + sleepover + idea fest. No one expects you to build the next Google. Showing up and learning is enough.</p>
+
+          <blockquote>
+            <p>Don't overthink it. You don't need a LeetCode streak or fancy resume to show up. Just go.</p>
+          </blockquote>
+
+          <h3 id="discord-servers-github-orgs-and-forums">Discord Servers, GitHub Orgs, and Forums</h3>
+
+          <p>The internet is full of nerds like us. Find your corner.</p>
+
+          <ul>
+            <li><strong>Discord Servers</strong> - Tons of communities exist around languages, frameworks, or student groups or even your own college's private server (Yes we do have those, link to our socials will be listed below).</li>
+            <li><strong>GitHub Organizations</strong> - These are great if you're interested in open source. Join orgs that match your interests, and see how real-world projects are built.</li>
+            <li><strong>Forums</strong> - Reddit communities like r/learnprogramming or r/cscareerquestions can be gold mines (with occasional chaos).</li>
+          </ul>
+
+          <h3 id="attending-meetups-and-online-events">Attending Meetups and Online Events</h3>
+
+          <p>Online tech meetups, webinars, or free workshops are happening all the time.</p>
+
+          <ul>
+            <li>Platforms like <a href="https://unstop.com/" target="_blank" rel="noopener noreferrer">Unstop</a>, <a href="https://devpost.com/" target="_blank" rel="noopener noreferrer">Devpost</a>, or <a href="https://hack2skill.com" target="_blank" rel="noopener noreferrer">Hack2Skill</a> regularly list events and hackathons for students.</li>
+            <li>Many are beginner-friendly and don't require deep experience.</li>
+          </ul>
+
+          <blockquote>
+            <p>If you're nervous, just join with your camera off and observe. You'll still learn a lot.</p>
+          </blockquote>
+
+          <h3 id="what-to-expect-as-a-beginner">What to Expect as a Beginner in Tech Spaces</h3>
+
+          <p>Let's be real. At first, you might feel a bit lost. People will throw around tools, acronyms, and libraries like they're Pokémon moves.</p>
+
+          <p>But here's the truth:</p>
+          <ul>
+            <li>Everyone started somewhere</li>
+            <li>Most of them still Google basic syntax</li>
+            <li>Half of them still vibecode basic "helloworlds".</li>
+            <li>You belong just as much as anyone else</li>
+          </ul>
+
+          <p>Start small:</p>
+          <ul>
+            <li>Say hi in a Discord server</li>
+            <li>Fork a GitHub repo and leave a comment</li>
+            <li>Share an article you liked with someone</li>
+          </ul>
+
+          <p>Communities aren't about showing off but they're about showing up.</p>
+
+          <blockquote>
+            <p>TL;DR: Find your people. Whether online or on campus, a good tech community is half knowledge, half motivation.</p>
+          </blockquote>
+
+          <h2 id="tools-and-resources">10. Tools and Resources</h2>
+
+          <p>As you go deeper into CS, you'll realize a bunch of tools and platforms keep popping up. Not just in classes, but in projects, interviews, and job prep too. This is your beginner kit of resources and tools that'll stay relevant throughout your entire journey. Most people have their own database of this stuff, whether it be saved reels, Google docs or any other format.</p>
+
+          <h3 id="learning-platforms">Learning Platforms That Don't Suck</h3>
+
+          <p>These are actually useful and not full of fluff. All of them are free or offer quality without pushing subscriptions in your face (Mostly).</p>
+
+          <div class="grid gap-4 md:grid-cols-2">
+            <div class="rounded-lg border bg-card p-4">
+              <h4 class="font-semibold mb-2">
+                <a href="https://cs50.harvard.edu/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">
+                  CS50 (Harvard)
+                </a>
+              </h4>
+              <p class="text-sm text-muted-foreground">One of the best introductions to computer science. Starts from zero, ends with solid foundations.</p>
+            </div>
+            
+            <div class="rounded-lg border bg-card p-4">
+              <h4 class="font-semibold mb-2">
+                <a href="https://www.freecodecamp.org/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">
+                  freeCodeCamp
+                </a>
+              </h4>
+              <p class="text-sm text-muted-foreground">Full hands-on courses with exercises. Especially good for web dev, data science, and projects.</p>
+            </div>
+            
+            <div class="rounded-lg border bg-card p-4">
+              <h4 class="font-semibold mb-2">
+                <a href="https://www.theodinproject.com/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">
+                  The Odin Project
+                </a>
+              </h4>
+              <p class="text-sm text-muted-foreground">A complete web development curriculum from scratch, including projects and Git.</p>
+            </div>
+            
+            <div class="rounded-lg border bg-card p-4">
+              <h4 class="font-semibold mb-2">
+                <a href="https://ocw.mit.edu/index.htm" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">
+                  MIT OpenCourseWare
+                </a>
+              </h4>
+              <p class="text-sm text-muted-foreground">Real lecture material from MIT. You'll find subjects like algorithms, AI, and systems here.</p>
+            </div>
+          </div>
+
+          <h3 id="tools-that-keep-showing-up">Tools That'll Keep Showing Up</h3>
+
+          <p>Whether it's assignments, debugging, interviews, or side projects, these tools have long-term value:</p>
+
+          <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <div class="rounded-lg border bg-card p-4">
+              <h4 class="font-semibold mb-2">
+                <a href="https://desktop.github.com/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">
+                  GitHub Desktop
+                </a>
+              </h4>
+              <p class="text-sm text-muted-foreground">Easier way to use Git without writing terminal commands.</p>
+            </div>
+            
+            <div class="rounded-lg border bg-card p-4">
+              <h4 class="font-semibold mb-2">
+                <a href="https://replit.com/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">
+                  Replit
+                </a>
+              </h4>
+              <p class="text-sm text-muted-foreground">Run and test code right from your browser. No setup needed.</p>
+            </div>
+            
+            <div class="rounded-lg border bg-card p-4">
+              <h4 class="font-semibold mb-2">
+                <a href="https://www.overleaf.com/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">
+                  Overleaf
+                </a>
+              </h4>
+              <p class="text-sm text-muted-foreground">Write resumes, lab reports, and formatted docs with templates.</p>
+            </div>
+            
+            <div class="rounded-lg border bg-card p-4">
+              <h4 class="font-semibold mb-2">
+                <a href="https://app.diagrams.net/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">
+                  Draw.io
+                </a>
+              </h4>
+              <p class="text-sm text-muted-foreground">For making diagrams, flowcharts, models, logic circuits.</p>
+            </div>
+            
+            <div class="rounded-lg border bg-card p-4">
+              <h4 class="font-semibold mb-2">
+                <a href="https://www.ilovepdf.com/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">
+                  iLovePDF
+                </a>
+              </h4>
+              <p class="text-sm text-muted-foreground">Merge, compress, convert, or edit PDFs without needing extra apps.</p>
+            </div>
+            
+            <div class="rounded-lg border bg-card p-4">
+              <h4 class="font-semibold mb-2">
+                <a href="https://www.canva.com/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">
+                  Canva
+                </a>
+              </h4>
+              <p class="text-sm text-muted-foreground">Design quick posters, slides, resumes, or club promo stuff even if you have zero design skills.</p>
+            </div>
+          </div>
+
+          <h3 id="useful-websites">Useful Websites</h3>
+
+          <p>These are solid, general-purpose sites that help you build strong fundamentals and figure out what to learn next.</p>
+
+          <ul>
+            <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer"><strong>W3Schools</strong></a>: One of the best places for clean, fast HTML/CSS/JS basics. Great for beginners.</li>
+            <li><a href="https://neetcode.io/" target="_blank" rel="noopener noreferrer"><strong>NeetCode</strong></a>: Structured DSA prep with free video explanations and categorized problems.</li>
+            <li><a href="https://roadmap.sh/" target="_blank" rel="noopener noreferrer"><strong>roadmap.sh</strong></a>: Visual roadmaps for frontend, backend, DevOps, and more. Helps you see the big picture and plan your learning.</li>
+            <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer"><strong>MDN Web Docs</strong></a>: The go-to reference for web technologies like HTML, CSS, and JavaScript.</li>
+            <li><a href="https://quickref.me/" target="_blank" rel="noopener noreferrer"><strong>Quickref.me</strong></a>: Minimalist cheat sheets for dozens of languages and tools. Great for fast lookups when you don't want to dig through docs.</li>
+          </ul>
+
+          <p>You don't need to use all of these right away. But knowing they exist and slowly picking them up when the time is right is how you get ahead without burning out.</p>
+
+          <h2 id="student-discounts-and-freebies">11. Student Discounts and Freebies</h2>
+
+          <p>Being a student means more than just deadlines and exams. You also get access to legit perks—premium tools, software, and big discounts across categories.</p>
+
+          <h3 id="dev-tools">Dev Tools</h3>
+
+          <p>These show up in real projects and internships. Most offers work with a college email or student ID.</p>
+
+          <div class="space-y-4">
+            <div class="rounded-lg border bg-card p-4">
+              <h4 class="font-semibold mb-2">
+                <a href="https://education.github.com/pack" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">
+                  GitHub Student Pack
+                </a>
+              </h4>
+              <p class="text-sm text-muted-foreground mb-2">Gives access to:</p>
+              <ul class="text-sm text-muted-foreground space-y-1">
+                <li>• GitHub Copilot, Bootstrap studio, MongoDB credits</li>
+                <li>• Free domain, SSL, and hosting via Namecheap</li>
+                <li>• Platforms like Educative and DataCamp</li>
+              </ul>
+            </div>
+            
+            <div class="rounded-lg border bg-card p-4">
+              <h4 class="font-semibold mb-2">
+                <a href="https://www.jetbrains.com/community/education/#students" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">
+                  JetBrains Student License
+                </a>
+              </h4>
+              <p class="text-sm text-muted-foreground">Full access to IntelliJ, PyCharm, WebStorm, and other pro-grade IDEs — free with a student email.</p>
+            </div>
+          </div>
+
+          <h3 id="cloud-and-infra">Cloud and Infra</h3>
+
+          <p>Build and deploy projects for free with student credits:</p>
+
+          <ul>
+            <li>Google Cloud, AWS, and Azure all offer free credits</li>
+            <li>Oracle Cloud has always-free services with basic compute and storage</li>
+            <li>No credit card needed in most cases</li>
+          </ul>
+
+          <h3 id="design-docs-and-planning">Design, Docs, and Planning</h3>
+
+          <p>Helpful for everything from class projects to personal sites.</p>
+
+          <ul>
+            <li><a href="https://www.figma.com/education/" target="_blank" rel="noopener noreferrer"><strong>Figma for Education</strong></a> gives you the Pro plan for free</li>
+            <li><a href="https://www.notion.so/product/notion-for-education" target="_blank" rel="noopener noreferrer"><strong>Notion for Students</strong></a> gives you the Pro plan for free</li>
+            <li><a href="https://www.overleaf.com/edu" target="_blank" rel="noopener noreferrer"><strong>Overleaf Student Plan</strong></a> offers discounts and premium features</li>
+            <li>Gemini Advanced free for 1 year (check eligibility)</li>
+            <li><a href="https://www.autodesk.com/education/edu-software/overview" target="_blank" rel="noopener noreferrer"><strong>Autodesk Education Access</strong></a>: Get AutoCAD, Fusion 360, Maya, and more completely free for 1 year as a student.</li>
+          </ul>
+
+          <div class="rounded-lg border-l-4 border-primary bg-primary/10 p-4 my-6">
+            <p class="text-sm font-medium">💡 Pro Tip</p>
+            <p class="text-sm text-muted-foreground mt-1">
+              Always check if a student option is available, even if it's not advertised. Many companies offer student discounts that aren't prominently displayed.
+            </p>
+          </div>
+
+          <blockquote>
+            <p>Don't pay for tools or gear you can get free or discounted just for being a student.</p>
+          </blockquote>
+
+          <!-- Navigation -->
+          <div class="flex items-center justify-between pt-8 border-t border-border">
+            <a
+              href="/part2"
+              class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+            >
+              <svg class="mr-2 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m15 18-6-6 6-6"></path>
+              </svg>
+              Previous: Getting Set Up
+            </a>
+            <a
+              href="/part4"
+              class="inline-flex items-center justify-center rounded-md bg-primary text-primary-foreground ring-offset-background transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 h-10 px-4 py-2 text-sm font-medium"
+            >
+              Next: Learning CS
+              <svg class="ml-2 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m9 18 6-6-6-6"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </main>
+
+      <!-- Table of Contents -->
+      <TableOfContents headings={headings} />
+    </div>
+  </div>
+</Layout>

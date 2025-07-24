@@ -1,0 +1,75 @@
+---
+// Table of Contents component for content pages
+interface Props {
+  headings: Array<{
+    depth: number;
+    slug: string;
+    text: string;
+  }>;
+}
+
+const { headings } = Astro.props;
+---
+
+<aside class="sticky top-20 hidden h-fit w-64 shrink-0 xl:block">
+  <div class="relative overflow-hidden rounded-lg border bg-background p-4">
+    <div class="flex items-center space-x-2 mb-4">
+      <svg class="h-4 w-4 text-muted-foreground" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 6h18"></path>
+        <path d="M3 12h18"></path>
+        <path d="M3 18h18"></path>
+      </svg>
+      <h4 class="text-sm font-semibold">On This Page</h4>
+    </div>
+    
+    <nav class="space-y-1">
+      {headings.map((heading) => (
+        <a
+          href={`#${heading.slug}`}
+          class={`block py-1 text-sm transition-colors hover:text-foreground ${
+            heading.depth === 2 
+              ? 'text-foreground' 
+              : heading.depth === 3 
+                ? 'pl-4 text-muted-foreground' 
+                : 'pl-8 text-muted-foreground'
+          }`}
+          data-toc-link={heading.slug}
+        >
+          {heading.text}
+        </a>
+      ))}
+    </nav>
+  </div>
+</aside>
+
+<script>
+  // Highlight current section in TOC
+  function updateTOC() {
+    const headings = document.querySelectorAll('h2, h3, h4');
+    const tocLinks = document.querySelectorAll('[data-toc-link]');
+    
+    let currentHeading = '';
+    
+    headings.forEach((heading) => {
+      const rect = heading.getBoundingClientRect();
+      if (rect.top <= 100) {
+        currentHeading = heading.id;
+      }
+    });
+    
+    tocLinks.forEach((link) => {
+      const href = link.getAttribute('href')?.replace('#', '');
+      if (href === currentHeading) {
+        link.classList.add('toc-active');
+      } else {
+        link.classList.remove('toc-active');
+      }
+    });
+  }
+  
+  // Update TOC on scroll
+  window.addEventListener('scroll', updateTOC);
+  
+  // Update TOC on page load
+  document.addEventListener('DOMContentLoaded', updateTOC);
+</script>

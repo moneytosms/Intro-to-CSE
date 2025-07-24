@@ -1,0 +1,64 @@
+---
+// Mobile navigation component
+---
+
+<div class="flex md:hidden">
+  <button
+    id="mobile-menu-button"
+    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-8 w-8 mr-2"
+    aria-label="Toggle mobile menu"
+  >
+    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="4" x2="20" y1="12" y2="12"></line>
+      <line x1="4" x2="20" y1="6" y2="6"></line>
+      <line x1="4" x2="20" y1="18" y2="18"></line>
+    </svg>
+  </button>
+  
+  <a class="flex items-center space-x-2" href="/">
+    <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+      <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+    </svg>
+    <span class="font-bold">CSE Guide</span>
+  </a>
+</div>
+
+<!-- Mobile menu overlay -->
+<div
+  id="mobile-menu"
+  class="fixed inset-0 top-14 z-50 grid h-[calc(100vh-3.5rem)] w-full grid-cols-1 overflow-auto bg-background pb-10 pl-8 pr-8 pt-8 md:hidden hidden"
+>
+  <div class="relative z-20 grid gap-6 rounded-md bg-popover p-4 text-popover-foreground shadow-md">
+    <nav class="grid gap-2">
+      <a class="flex w-full items-center py-2 text-lg font-medium transition-colors hover:text-foreground/80 text-foreground/60" href="/part1">
+        Part 1: Getting Started
+      </a>
+      <a class="flex w-full items-center py-2 text-lg font-medium transition-colors hover:text-foreground/80 text-foreground/60" href="/part2">
+        Part 2: Setup
+      </a>
+      <a class="flex w-full items-center py-2 text-lg font-medium transition-colors hover:text-foreground/80 text-foreground/60" href="/part3">
+        Part 3: Community & Tools
+      </a>
+      <a class="flex w-full items-center py-2 text-lg font-medium transition-colors hover:text-foreground/80 text-foreground/60" href="/part4">
+        Part 4: Learning CS
+      </a>
+    </nav>
+  </div>
+</div>
+
+<script is:inline>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  mobileMenuButton?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+  
+  // Close mobile menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!mobileMenuButton?.contains(e.target) && !mobileMenu?.contains(e.target)) {
+      mobileMenu?.classList.add('hidden');
+    }
+  });
+</script>

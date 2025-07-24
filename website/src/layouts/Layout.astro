@@ -1,0 +1,62 @@
+---
+// Main layout for all pages
+import '@/styles/global.css';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import ThemeScript from '@/components/ThemeScript.astro';
+
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Your no-fluff, friendly guide to surviving and thriving in computer science." } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    
+    <!-- Preload fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Meta tags for SEO -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+  </head>
+  <body class="font-sans antialiased min-h-screen bg-background text-foreground">
+    <ThemeScript />
+    
+    <div class="relative flex min-h-screen flex-col">
+      <Header />
+      
+      <main class="flex-1">
+        <slot />
+      </main>
+      
+      <Footer />
+    </div>
+  </body>
+</html>
+
+<style>
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  code {
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+  }
+</style>

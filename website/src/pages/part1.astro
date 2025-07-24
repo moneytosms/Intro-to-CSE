@@ -1,0 +1,232 @@
+---
+// Part 1 page
+import Layout from '@/layouts/Layout.astro';
+import TableOfContents from '@/components/TableOfContents.astro';
+
+const headings = [
+  { depth: 2, slug: 'what-even-is-computer-science', text: 'What Even Is Computer Science?' },
+  { depth: 3, slug: 'its-not-just-coding', text: "It's Not Just \"Coding\"" },
+  { depth: 3, slug: 'cs-vs-software-engineering-vs-it', text: 'CS vs. Software Engineering vs. IT' },
+  { depth: 3, slug: 'thinking-like-a-computer-scientist', text: 'Thinking Like a Computer Scientist' },
+  { depth: 3, slug: 'a-few-habits-youll-start-building', text: "A Few Habits You'll Start Building" },
+  { depth: 2, slug: 'why-are-you-here', text: 'Why Are You Here (and What Can You Do With CS)?' },
+  { depth: 3, slug: 'problem-solving-not-just-job-hunting', text: 'Problem-Solving, Not Just Job-Hunting' },
+  { depth: 3, slug: 'real-world-impact', text: 'Real-World Impact' },
+  { depth: 2, slug: 'finding-your-area-of-interest', text: 'Finding Your Area of Interest' },
+];
+---
+
+<Layout title="Part 1: Starting Your CS Journey - CSE Degree Guide">
+  <div class="container max-w-screen-2xl">
+    <!-- Navigation breadcrumb -->
+    <div class="py-4">
+      <nav class="flex items-center space-x-2 text-sm text-muted-foreground">
+        <a href="/" class="hover:text-foreground transition-colors">Home</a>
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m9 18 6-6-6-6"></path>
+        </svg>
+        <span class="font-medium text-foreground">Part 1: Starting Your CS Journey</span>
+      </nav>
+    </div>
+    
+    <div class="flex flex-1 gap-6 md:gap-10">
+      <!-- Main content -->
+      <main class="flex-1 min-w-0">
+        <div class="prose prose-gray dark:prose-invert max-w-none">
+          <div class="mb-8 space-y-4">
+            <h1 class="text-4xl font-bold tracking-tight lg:text-5xl">
+              Part 1: Starting Your CS Journey
+            </h1>
+            <p class="text-xl text-muted-foreground">
+              Let's clear up what computer science really is and help you find your place in this exciting field.
+            </p>
+          </div>
+
+          <h2 id="what-even-is-computer-science">1. What Even Is Computer Science?</h2>
+
+          <p>Let's clear something up right away: <strong>computer science is not just "coding."</strong></p>
+
+          <p>Yes, you'll write code. You'll even spend a lot of time debugging broken code. But <strong>coding is just a tool</strong>. It's like saying writing is the same thing as literature — it's not. It's a skill, not the whole field.</p>
+
+          <p>So what <em>is</em> CS, then?</p>
+
+          <h3 id="its-not-just-coding">It's Not Just "Coding"</h3>
+
+          <p>Computer science is about <strong>understanding problems and designing ways to solve them using computers</strong>. That might sound vague, and that's because CS is broad. Here are just a few areas it touches. Each one can turn into a full career path.</p>
+
+          <ul>
+            <li>Building websites and web apps that people actually use<br />
+              (also called <strong>web development</strong>)</li>
+            <li>Learning how hackers break into systems and how to protect them<br />
+              (that's <strong>cybersecurity</strong>)</li>
+            <li>Making Android or iOS apps and figuring out how they run across devices<br />
+              (<strong>mobile app development</strong>)</li>
+            <li>Teaching computers to recognize patterns and improve with data<br />
+              (<strong>machine learning and AI</strong>)</li>
+            <li>Working with huge amounts of raw data and turning it into something useful<br />
+              (<strong>data science and engineering</strong>)</li>
+            <li>Managing deployments, cloud servers, and keeping apps online<br />
+              (<strong>cloud computing and DevOps</strong>)</li>
+            <li>Designing and coding video games or simulations<br />
+              (<strong>game development</strong>)</li>
+            <li>Understanding how your computer runs programs and manages memory<br />
+              (<strong>systems programming and operating systems</strong>)</li>
+            <li>Writing code that talks to physical devices like sensors, motors, and circuits<br />
+              (<strong>embedded systems and IoT</strong>)</li>
+            <li>Learning how crypto, NFTs, and decentralization actually work<br />
+              (<strong>blockchain and smart contracts</strong>)</li>
+            <li>Designing better interfaces, improving accessibility, and making apps easy to use<br />
+              (<strong>human-computer interaction or HCI</strong>)</li>
+            <li>Applying CS in biology, physics, economics, or medicine<br />
+              (<strong>interdisciplinary CS</strong>, like bioinformatics or computational finance)</li>
+          </ul>
+
+          <p>That's a lot, right?</p>
+
+          <p>You won't be doing all of this in your first year. But you'll see bits and pieces in your classes, clubs, and conversations.</p>
+
+          <p>You'll naturally find what interests you. No pressure to figure it out on day one.</p>
+
+          <blockquote>
+            <p>Bottom line: coding is just the beginning. What you build with it is where CS starts to get exciting.</p>
+          </blockquote>
+
+          <h3 id="cs-vs-software-engineering-vs-it">CS vs. Software Engineering vs. IT</h3>
+
+          <p>Not sure what CS includes compared to software engineering or IT? You're not alone. These terms get mixed up a lot, even by professionals.</p>
+
+          <p>But they're not the same. Let's break it down clearly.</p>
+
+          <ul>
+            <li><strong>Computer Science (CS)</strong><br />
+              CS is the <strong>academic and theoretical side</strong> of computing.<br />
+              You study algorithms, data structures, logic, compilers, architecture — the ideas behind how computers work and how software could be built.<br />
+              It's less about specific tools and more about deep concepts and problem solving.</li>
+            <li><strong>Software Engineering (SE)</strong><br />
+              SE is about <strong>building real-world software systems that people actually use</strong>.<br />
+              It focuses on writing maintainable code, structuring large projects, collaborating in teams, testing, and shipping features.<br />
+              SEs apply CS knowledge to solve practical problems.</li>
+            <li><strong>Information Technology (IT)</strong><br />
+              IT focuses on <strong>keeping tech systems up and running</strong> — things like networks, servers, internal tools, databases, and user support.<br />
+              IT is not about building new software. It's about managing and maintaining what already exists.</li>
+          </ul>
+
+          <blockquote>
+            <p>TL;DR: CS builds the foundation. SE builds the software. IT keeps it running.</p>
+          </blockquote>
+
+          <p>These areas do overlap, and in real jobs, lines can blur. But having this mental model helps when figuring out what kind of work fits you best.</p>
+
+          <h3 id="thinking-like-a-computer-scientist">Thinking Like a Computer Scientist</h3>
+
+          <p>You don't need to be a genius to study CS. But you <em>will</em> need to think in new ways.</p>
+
+          <p>Computer science is about:</p>
+          <ul>
+            <li><strong>Breaking problems into small, logical steps</strong></li>
+            <li><strong>Spotting patterns and weird edge cases</strong></li>
+            <li><strong>Thinking ahead — what if this breaks? what kind of input will crash it?</strong></li>
+            <li><strong>Being patient and persistent</strong> — debugging takes up a lot of your time</li>
+            <li><strong>Treating problems like puzzles, not just formulas</strong></li>
+          </ul>
+
+          <h3 id="a-few-habits-youll-start-building">A Few Habits You'll Start Building</h3>
+
+          <ul>
+            <li><strong>Ask "why" and "how" a lot.</strong> Why does this work? How is it built under the hood?</li>
+            <li><strong>Get comfortable with failure.</strong> Your code will break. That's normal. Fixing it is part of the job.</li>
+            <li><strong>Focus on how, not just what.</strong> In CS, <em>how</em> you solve something matters more than just getting the answer.</li>
+            <li><strong>Use paper or whiteboards.</strong> Not everything happens on a screen. Sketching and mapping things out helps a lot.</li>
+          </ul>
+
+          <p>You're not expected to know or do all this right now. You'll grow into it over time through classes, assignments, and projects.</p>
+
+          <p>If you like puzzles, strategy games, or figuring out how things work behind the scenes — you're already thinking like a computer scientist.</p>
+
+          <p>Coming up next: why choosing CS makes sense right now, both for your career and for way more than that.</p>
+
+          <h2 id="why-are-you-here">2. Why Are You Here (and What Can You Do With CS)?</h2>
+
+          <p>So you've picked (or are thinking about picking) computer science. Let's talk about <em>why</em> that's a strong decision — and not just because of the job market.</p>
+
+          <h3 id="problem-solving-not-just-job-hunting">Problem-Solving, Not Just Job-Hunting</h3>
+
+          <p>Sure, CS can lead to a great job. But that's not the only reason people choose it.</p>
+
+          <p>Studying CS trains you to:</p>
+          <ul>
+            <li>Break down complex problems into simple parts</li>
+            <li>Think in systems and logic</li>
+            <li>Design and test your own solutions</li>
+            <li>Learn new tools and tech quickly</li>
+          </ul>
+
+          <p>These skills apply everywhere — not just in software. From fixing code to fixing real-world problems, CS helps you think more clearly.</p>
+
+          <p>It's not just about writing code. It's about building the way you think.</p>
+
+          <h3 id="real-world-impact">Real-World Impact</h3>
+
+          <p>We live in a world powered by software. But now you're not just a user — you're learning how to build the things that power it.</p>
+
+          <p>Computer science lets you create things that actually help people:</p>
+          <ul>
+            <li>Apps that track mental health</li>
+            <li>Tools that automate boring tasks</li>
+            <li>Algorithms that analyze climate data</li>
+            <li>Systems that improve banking, healthcare, education, and more</li>
+          </ul>
+
+          <p>Whether it's a personal project or something used by thousands, the things you build can have a real-world impact.</p>
+
+          <h2 id="finding-your-area-of-interest">3. Finding Your Area of Interest</h2>
+
+          <p>One of the best parts of CS is how open it is. You're not stuck in a single job or industry.</p>
+
+          <p>With a CS degree, you can explore:</p>
+          <ul>
+            <li><strong>Software development</strong> (web, mobile, backend, etc.)</li>
+            <li><strong>Cybersecurity</strong></li>
+            <li><strong>Game development</strong></li>
+            <li><strong>AI and machine learning</strong></li>
+            <li><strong>Startups or side projects</strong></li>
+            <li><strong>Research or academia</strong></li>
+            <li><strong>Tech in other fields</strong> (like finance, medicine, or education)</li>
+            <li><strong>Entrepreneurship</strong> — build your own product</li>
+          </ul>
+
+          <p>And if you ever want to shift paths — into product, data, design, or teaching — your CS background will still help you.</p>
+
+          <blockquote>
+            <p>TL;DR: CS gives you the tools to build, solve, and explore. Where you go from there is totally up to you.</p>
+          </blockquote>
+
+          <!-- Navigation -->
+          <div class="flex items-center justify-between pt-8 border-t border-border">
+            <a
+              href="/"
+              class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+            >
+              <svg class="mr-2 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m15 18-6-6 6-6"></path>
+              </svg>
+              Back to Home
+            </a>
+            <a
+              href="/part2"
+              class="inline-flex items-center justify-center rounded-md bg-primary text-primary-foreground ring-offset-background transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 h-10 px-4 py-2 text-sm font-medium"
+            >
+              Next: Getting Set Up
+              <svg class="ml-2 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m9 18 6-6-6-6"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </main>
+
+      <!-- Table of Contents -->
+      <TableOfContents headings={headings} />
+    </div>
+  </div>
+</Layout>

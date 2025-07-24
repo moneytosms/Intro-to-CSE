@@ -1,0 +1,24 @@
+---
+// Script to handle theme initialization
+---
+
+<script is:inline>
+  // Prevent FOUC (Flash of Unstyled Content)
+  function setTheme() {
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  }
+  
+  // Set theme immediately
+  setTheme();
+  
+  // Listen for storage changes (when theme is changed in another tab)
+  window.addEventListener('storage', (e) => {
+    if (e.key === 'theme') {
+      setTheme();
+    }
+  });
+</script>
