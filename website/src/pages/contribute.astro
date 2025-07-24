@@ -1,0 +1,131 @@
+---
+import Layout from '@/layouts/Layout.astro';
+---
+
+<Layout title="Contribute - Intro to CSE"
+  showGlassyBackground={true}
+  glassyConfig={{
+    color: "rgba(168, 85, 247, 0.12)",
+    opacity: 0.22,
+    blur: "24px"
+  }}
+>
+  <div class="container max-w-4xl py-6 lg:py-10">
+    <div class="flex flex-col items-start gap-4 md:flex-row md:justify-between md:gap-8">
+      <div class="flex-1 space-y-4">
+        <h1 class="inline-block font-heading text-4xl tracking-tight lg:text-5xl">
+          Contribute to the Guide
+        </h1>
+        <p class="text-xl text-muted-foreground">
+          Help make CS education more accessible for everyone.
+        </p>
+      </div>
+    </div>
+    <hr class="my-8" />
+    <div class="prose prose-neutral dark:prose-invert max-w-none">
+      <h2>Why contribute?</h2>
+      <p>
+        This guide exists to help CS students succeed, and it gets better with community input. Whether you're a beginner who found something confusing or an experienced developer with insights to share, your contributions make a real difference.
+      </p>
+
+      <h2>Ways to contribute</h2>
+
+      <h3>📝 Content improvements</h3>
+      <ul>
+        <li><strong>Fix typos and grammar</strong> - Every correction helps</li>
+        <li><strong>Clarify confusing sections</strong> - If you had to read something twice, others will too</li>
+        <li><strong>Add examples</strong> - Real-world examples make concepts stick</li>
+        <li><strong>Update outdated information</strong> - Tech moves fast, help us keep up</li>
+      </ul>
+
+      <h3>💡 New content</h3>
+      <ul>
+        <li><strong>Share your experience</strong> - What worked for you? What didn't?</li>
+        <li><strong>Add resource recommendations</strong> - Great tools, books, or courses you've found</li>
+        <li><strong>Write new sections</strong> - Is there a topic we're missing?</li>
+        <li><strong>Create exercises or projects</strong> - Hands-on practice ideas</li>
+      </ul>
+
+      <h3>🐛 Report issues</h3>
+      <ul>
+        <li><strong>Broken links</strong> - The web changes, links die</li>
+        <li><strong>Factual errors</strong> - Help us keep information accurate</li>
+        <li><strong>Missing topics</strong> - What else should we cover?</li>
+        <li><strong>Accessibility issues</strong> - Help us make the guide usable for everyone</li>
+      </ul>
+
+      <h2>How to contribute</h2>
+
+      <h3>Quick contributions (no coding required)</h3>
+      <ol>
+        <li>Found an issue? <a href="https://github.com/moneytosms/Intro-to-CSE/issues/new" target="_blank" rel="noreferrer">Open an issue</a> on GitHub</li>
+        <li>Describe what you found and suggest an improvement</li>
+        <li>We'll review and make the changes, crediting you</li>
+      </ol>
+
+      <h3>Direct contributions (for the Git-savvy)</h3>
+      <ol>
+        <li><strong>Fork</strong> the repository on GitHub</li>
+        <li><strong>Clone</strong> your fork locally</li>
+        <li><strong>Create a branch</strong> for your changes</li>
+        <li><strong>Make your improvements</strong> to the markdown files</li>
+        <li><strong>Test locally</strong> (optional but appreciated)</li>
+        <li><strong>Submit a pull request</strong> with a clear description</li>
+      </ol>
+
+      <h2>Contribution guidelines</h2>
+
+      <h3>Content style</h3>
+      <ul>
+        <li><strong>Keep it friendly</strong> - No academic jargon, write like you're helping a friend</li>
+        <li><strong>Be practical</strong> - Focus on actionable advice over theory</li>
+        <li><strong>Stay current</strong> - Prefer recent tools and practices</li>
+        <li><strong>Be inclusive</strong> - Consider different backgrounds and learning styles</li>
+      </ul>
+
+      <h3>Technical requirements</h3>
+      <ul>
+        <li><strong>Markdown format</strong> - All content is written in Markdown</li>
+        <li><strong>Clear headings</strong> - Use proper heading hierarchy (H1, H2, H3)</li>
+        <li><strong>Link check</strong> - Make sure all links work</li>
+        <li><strong>Spell check</strong> - Basic proofreading goes a long way</li>
+      </ul>
+
+      <h2>Recognition</h2>
+      <p>
+        All contributors will be credited in the repository. Significant contributions may be highlighted in the guide itself. This is a community effort, and we want to celebrate everyone who helps make it better.
+      </p>
+
+      <h2>Questions?</h2>
+      <p>
+        Not sure about something? Want to discuss a major change before implementing it? Feel free to:
+      </p>
+      <ul>
+        <li><a href="https://github.com/moneytosms/Intro-to-CSE/discussions" target="_blank" rel="noreferrer">Start a discussion</a> on GitHub</li>
+        <li><a href="https://github.com/moneytosms/Intro-to-CSE/issues" target="_blank" rel="noreferrer">Open an issue</a> to ask questions</li>
+      </ul>
+
+      <div class="flex gap-4 mt-8">
+        <a
+          href="https://github.com/moneytosms/Intro-to-CSE"
+          target="_blank"
+          rel="noreferrer"
+          class="inline-flex h-10 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground ring-offset-background transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+        >
+          <svg class="mr-2 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+          </svg>
+          View Repository
+        </a>
+        <a
+          href="https://github.com/moneytosms/Intro-to-CSE/issues/new"
+          target="_blank"
+          rel="noreferrer"
+          class="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+        >
+          Report an Issue
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>

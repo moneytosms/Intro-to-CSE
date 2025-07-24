@@ -4,13 +4,35 @@ import '@/styles/global.css';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import ThemeScript from '@/components/ThemeScript.astro';
+import LetterGlitch from '@/components/LetterGlitch.tsx';
 
 export interface Props {
   title: string;
   description?: string;
+  showGlassyBackground?: boolean;
+  showLetterGlitch?: boolean;
+  glassyConfig?: {
+    color?: string;
+    opacity?: number;
+    blur?: string;
+  };
+  letterGlitchConfig?: {
+    glitchColors?: string[];
+    glitchSpeed?: number;
+    centerVignette?: boolean;
+    outerVignette?: boolean;
+    smooth?: boolean;
+  };
 }
 
-const { title, description = "Your no-fluff, friendly guide to surviving and thriving in computer science." } = Astro.props;
+const { 
+  title, 
+  description = "Your no-fluff, friendly guide to surviving and thriving in computer science.",
+  showGlassyBackground = false,
+  showLetterGlitch = false,
+  glassyConfig = { color: "rgba(255, 255, 255, 0.1)", opacity: 0.1, blur: "20px" },
+  letterGlitchConfig = { glitchColors: ["#2b4539", "#61dca3", "#61b3dc"], glitchSpeed: 50, centerVignette: false, outerVignette: true, smooth: true }
+} = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -40,9 +62,20 @@ const { title, description = "Your no-fluff, friendly guide to surviving and thr
     <ThemeScript />
     
     <div class="relative flex min-h-screen flex-col">
+      {showLetterGlitch && (
+        <div class="fixed inset-0 z-0">
+          <LetterGlitch client:only="react" {...letterGlitchConfig} />
+        </div>
+      )}
+      {showGlassyBackground && (
+        <div class="fixed inset-0 z-0">
+          <div class="glassy-background" style={`--glass-color: ${glassyConfig.color}; --glass-opacity: ${glassyConfig.opacity}; --glass-blur: ${glassyConfig.blur};`}></div>
+        </div>
+      )}
+      
       <Header />
       
-      <main class="flex-1">
+      <main class="flex-1 relative z-10">
         <slot />
       </main>
       
@@ -58,5 +91,57 @@ const { title, description = "Your no-fluff, friendly guide to surviving and thr
   
   code {
     font-family: 'JetBrains Mono', 'Courier New', monospace;
+  }
+
+  .glassy-background {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      135deg,
+      var(--glass-color, rgba(255, 255, 255, 0.1)) 0%,
+      rgba(255, 255, 255, 0.05) 50%,
+      var(--glass-color, rgba(255, 255, 255, 0.1)) 100%
+    );
+    backdrop-filter: blur(var(--glass-blur, 20px));
+    -webkit-backdrop-filter: blur(var(--glass-blur, 20px));
+    opacity: var(--glass-opacity, 0.1);
+    position: relative;
+  }
+
+  .glassy-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+      circle at 20% 50%, 
+      rgba(120, 119, 198, 0.1) 0%, 
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%, 
+      rgba(255, 119, 198, 0.1) 0%, 
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 40% 80%, 
+      rgba(120, 219, 255, 0.1) 0%, 
+      transparent 50%
+    );
+    animation: float 20s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    33% {
+      transform: translateY(-10px) rotate(1deg);
+    }
+    66% {
+      transform: translateY(5px) rotate(-1deg);
+    }
   }
 </style>

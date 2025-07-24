@@ -1,0 +1,592 @@
+---
+// Part 2 page
+import Layout from '@/layouts/Layout.astro';
+import TableOfContents from '@/components/TableOfContents.astro';
+
+const headings = [
+  { depth: 2, slug: 'code-editors', text: 'Code Editors: Where You Actually Code Stuff' },
+  { depth: 3, slug: 'what-is-a-code-editor', text: 'What is a Code Editor?' },
+  { depth: 3, slug: 'primary-recommendation-vs-code', text: 'Primary Recommendation: VS Code' },
+  { depth: 3, slug: 'what-is-a-compiler', text: "What's a Compiler, and Why Do I Need One?" },
+  { depth: 3, slug: 'online-code-runners', text: "What If I Don't Want to Set Up Anything Yet?" },
+  { depth: 3, slug: 'editors-vs-ides', text: "Editors vs. IDEs: What's the Difference?" },
+  { depth: 2, slug: 'command-line-interfaces', text: 'Command Line Interfaces: Not Scary, Just Useful' },
+  { depth: 3, slug: 'what-is-command-line', text: 'What Even Is the Command Line?' },
+  { depth: 3, slug: 'why-command-line-in-cs', text: "Why You'll Bump Into It in CS" },
+  { depth: 3, slug: 'terminal-by-os', text: 'What Terminal You\'ll See Depends on Your OS' },
+  { depth: 3, slug: 'linux-and-dual-boot', text: 'What About Linux and "Dual Boot"?' },
+  { depth: 2, slug: 'git-and-github', text: 'Git and GitHub: Saving Your Work Like a Pro' },
+  { depth: 3, slug: 'enter-git', text: 'Enter Git' },
+  { depth: 3, slug: 'enter-github', text: 'Enter GitHub' },
+  { depth: 3, slug: 'two-ways-to-use-git', text: 'Two Ways to Use Git and GitHub' },
+  { depth: 3, slug: 'installing-git', text: 'Installing Git (One-Time Setup)' },
+  { depth: 2, slug: 'browsers-and-extensions', text: 'Browsers & Extensions: Choose Your Weapon' },
+  { depth: 3, slug: 'common-browsers', text: 'Common Browsers for Dev Work' },
+  { depth: 3, slug: 'useful-extensions', text: 'Optional: Extensions You Might Like' },
+  { depth: 2, slug: 'markdown-and-note-taking', text: 'Markdown and Note-Taking Tools: Nerd Notes Made Simple' },
+  { depth: 3, slug: 'what-is-markdown', text: 'What Even Is Markdown?' },
+  { depth: 3, slug: 'note-taking-tools', text: 'Popular Note-Taking Tools' },
+  { depth: 3, slug: 'comparing-tools', text: 'Comparing the Tools' },
+];
+---
+
+<Layout 
+  title="Part 2: Getting Set Up - Intro to CSE"
+  showGlassyBackground={true}
+  glassyConfig={{
+    color: "rgba(16, 185, 129, 0.12)",
+    opacity: 0.28,
+    blur: "22px"
+  }}
+>
+  <div class="container max-w-screen-2xl">
+    <!-- Navigation breadcrumb -->
+    <div class="py-4">
+      <nav class="flex items-center space-x-2 text-sm text-muted-foreground">
+        <a href="/" class="hover:text-foreground transition-colors">Home</a>
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m9 18 6-6-6-6"></path>
+        </svg>
+        <span class="font-medium text-foreground">Part 2: Getting Set Up</span>
+      </nav>
+    </div>
+    
+    <div class="flex flex-1 gap-6 md:gap-10">
+      <!-- Main content -->
+      <main class="flex-1 min-w-0">
+        <div class="prose prose-gray dark:prose-invert max-w-none">
+          <div class="mb-8 space-y-4">
+            <h1 class="text-4xl font-bold tracking-tight lg:text-5xl">
+              Part 2: Getting Set Up (Without Getting Overwhelmed)
+            </h1>
+            <p class="text-xl text-muted-foreground">
+              Essential tools and setup guides to get you coding without the frustration.
+            </p>
+          </div>
+
+          <h2 id="code-editors">4. Code Editors: Where You Actually <em>Code</em> Stuff</h2>
+
+          <p>Let's talk about the thing you'll probably open more than any textbook: <strong>your code editor</strong>.</p>
+
+          <p>This is where you'll type your assignments, try out programming concepts, and experiment. It's your sandbox. But not all code editors are created equal, and they're not the same as full-blown <strong>IDEs</strong> (we'll get to that in a bit).</p>
+
+          <h3 id="what-is-a-code-editor">What is a Code Editor?</h3>
+
+          <p>At its core, a <strong>code editor</strong> is like Notepad, but designed for writing and managing code.<br>
+          It helps you:</p>
+          <ul>
+            <li>Write, edit, and save code files</li>
+            <li>Highlight syntax based on programming language</li>
+            <li>Auto-complete common patterns and functions</li>
+            <li>Organize projects with folders</li>
+            <li>Integrate tools like terminals, debuggers, and Git</li>
+          </ul>
+
+          <p>It <em>doesn't</em> necessarily know how to <strong>run</strong> or <strong>compile</strong> your code - that's where compilers or interpreters come in.</p>
+
+          <h3 id="primary-recommendation-vs-code">Primary Recommendation: VS Code (Visual Studio Code)</h3>
+
+          <p>If you're just getting started, <strong>use VS Code</strong>. Here's why:</p>
+
+          <ul>
+            <li>✅ Works on Windows, macOS, Linux</li>
+            <li>✨ Clean and customizable interface</li>
+            <li>🧠 Smart autocomplete and extensions for nearly any language</li>
+            <li>📂 Built-in terminal + file explorer</li>
+            <li>🛠️ Git integration, debugging tools, Markdown support</li>
+          </ul>
+
+          <p><a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">🔗 Download VS Code</a></p>
+
+          <p>Once installed, you'll likely want to add <strong>language-specific extensions</strong> (like C/C++, Python, Java, etc.) from the built-in marketplace.</p>
+
+          <h3 id="what-is-a-compiler">Wait... What's a Compiler, and Why Do I Need One?</h3>
+
+          <p>Great question. A <strong>compiler</strong> is a tool that takes the code you write in a programming language (like C or C++) and turns it into something your computer can actually run - usually machine code.</p>
+
+          <p>Without it, your C code is just... text. A compiler makes it executable.</p>
+
+          <p>So if you're using <strong>VS Code</strong> and trying to run a C program, you'll need:</p>
+
+          <ol>
+            <li>A <strong>compiler</strong> installed on your system</li>
+            <li>VS Code <strong>configured</strong> to use that compiler</li>
+          </ol>
+
+          <h4>Installing a C Compiler</h4>
+
+          <p>Here's how to get a basic C/C++ compiler set up, depending on your OS:</p>
+
+          <ul>
+            <li><strong>Windows:</strong><br>
+              - Install <a href="https://www.mingw-w64.org/" target="_blank" rel="noopener noreferrer">MinGW</a> or <a href="https://jmeubank.github.io/tdm-gcc/" target="_blank" rel="noopener noreferrer">TDM-GCC</a><br>
+              - Add the <code>bin</code> folder to your system <code>PATH</code> so VS Code can find it</li>
+            <li><strong>macOS:</strong><br>
+              - Install Xcode Command Line Tools using:<br>
+              <pre><code>xcode-select --install</code></pre></li>
+            <li><strong>Linux:</strong><br>
+              - Use your package manager (Ubuntu/Debian):<br>
+              <pre><code>sudo apt update && sudo apt install build-essential</code></pre></li>
+          </ul>
+
+          <h4>Add the Extension in VS Code</h4>
+
+          <p>Once your compiler is installed, install the <strong>C/C++ extension</strong> in VS Code by Microsoft:<br>
+          <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools" target="_blank" rel="noopener noreferrer">🔗 C/C++ Extension for VS Code</a></p>
+
+          <p>Now VS Code will recognize <code>.c</code> or <code>.cpp</code> files and connect to your compiler. You can press <code>Ctrl + Shift + B</code> to build your program, or use tasks/launch configs.</p>
+
+          <h3 id="online-code-runners">What If I Don't Want to Set Up Anything Yet?</h3>
+
+          <p>Totally valid. Especially early on, you might just want to <em>run code and see what happens</em>.</p>
+
+          <h4>Online Code Runners & IDEs</h4>
+
+          <p>Here are some reliable online platforms that don't require installing anything:</p>
+
+          <ul>
+            <li><a href="https://replit.com/" target="_blank" rel="noopener noreferrer">Replit</a> — Full cloud editor with terminal access</li>
+            <li><a href="https://www.onlinegdb.com/" target="_blank" rel="noopener noreferrer">OnlineGDB</a> — Great for C/C++ with debugger</li>
+            <li><a href="https://www.programiz.com/c-programming/online-compiler/" target="_blank" rel="noopener noreferrer">Programiz</a> — Beginner-friendly</li>
+            <li><a href="https://colab.research.google.com/" target="_blank" rel="noopener noreferrer">Google Colab</a> — Python only, great for ML/data science</li>
+          </ul>
+
+          <p>These are perfect for:</p>
+          <ul>
+            <li>Quick experiments</li>
+            <li>Running code on shared/public devices</li>
+            <li>When you're just learning syntax or flow</li>
+          </ul>
+
+          <blockquote>
+            <p>Heads-up: Online platforms can be slow or limited. They're great for learning, but not for long-term project work.</p>
+          </blockquote>
+
+          <h3 id="editors-vs-ides">Editors vs. IDEs: What's the Difference?</h3>
+
+          <p><strong>Editors</strong> like VS Code or Sublime just provide the environment to <em>write</em> code.</p>
+
+          <p><strong>IDEs (Integrated Development Environments)</strong> like IntelliJ, PyCharm, or Eclipse go further by including:</p>
+
+          <ul>
+            <li>Built-in compilers/runtimes</li>
+            <li>Debugging and profiling tools</li>
+            <li>Code navigation and refactoring features</li>
+          </ul>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Tool</th>
+                <th>Type</th>
+                <th>Good For</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>VS Code</strong></td>
+                <td>Editor (light IDE)</td>
+                <td>All-rounder</td>
+                <td>Add extensions for anything</td>
+              </tr>
+              <tr>
+                <td><strong>PyCharm</strong></td>
+                <td>IDE</td>
+                <td>Python-heavy work</td>
+                <td>Heavier, but smarter out of the box</td>
+              </tr>
+              <tr>
+                <td><strong>IntelliJ IDEA</strong></td>
+                <td>IDE</td>
+                <td>Java dev</td>
+                <td>Common in backend dev courses</td>
+              </tr>
+              <tr>
+                <td><strong>Sublime Text</strong></td>
+                <td>Editor</td>
+                <td>Fast editing</td>
+                <td>Light weight notepad</td>
+              </tr>
+              <tr>
+                <td><strong>Replit</strong></td>
+                <td>Online IDE</td>
+                <td>Instant testing</td>
+                <td>Good for practice, not projects</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <blockquote>
+            <p>TL;DR: Start with VS Code. Explore others later based on your interests or course requirements.</p>
+          </blockquote>
+
+          <h2 id="command-line-interfaces">5. Command Line Interfaces: Not Scary, Just Useful</h2>
+
+          <p>Let's talk about something that looks kind of old-school, but is actually super useful once you get the hang of it: the command line.</p>
+
+          <p>You've probably used your computer mostly by clicking things: folders, apps, icons. The command line is just a different way of doing those things by typing instead.</p>
+
+          <p>It might seem strange at first, but it's one of the first tools you'll see in your CS degree, and it'll keep showing up. Let's break it down.</p>
+
+          <h3 id="what-is-command-line">So... What Even Is the Command Line?</h3>
+
+          <p>Think of it like sending messages to your computer.</p>
+
+          <p>Instead of opening a folder by double-clicking it, you type a short instruction to open it.<br>
+          Instead of running a program by clicking a play button, you tell the computer to run it using words.</p>
+
+          <p>The command line is just a text box where you type instructions and get text back.</p>
+
+          <p>It's not fancy. It's not pretty. But it works really well and it's way more powerful than it looks.</p>
+
+          <h3 id="why-command-line-in-cs">Why You'll Bump Into It in CS</h3>
+
+          <p>In your first year, there will be times when your professor or lab manual says things like:</p>
+
+          <ul>
+            <li>"Open the terminal and go to this folder"</li>
+            <li>"Run your program from the command line"</li>
+            <li>"Compile your code using the terminal"</li>
+          </ul>
+
+          <p>And if you've never seen it before, it might feel like you're lost. But really, it's just a tool to get things done.</p>
+
+          <p>The terminal helps you:</p>
+          <ul>
+            <li>Open and move through folders</li>
+            <li>Run your programs</li>
+            <li>Use certain tools that don't have buttons or menus</li>
+          </ul>
+
+          <p>You don't need to master it right now. You just need to recognize it, open it, and be open to trying it when needed.</p>
+
+          <h3 id="terminal-by-os">What Terminal You'll See Depends on Your OS</h3>
+
+          <p>Different operating systems give you different versions of the terminal.</p>
+
+          <ul>
+            <li><strong>Windows</strong><br>
+              You'll see something called Command Prompt or PowerShell.</li>
+            <li><strong>macOS</strong><br>
+              Comes with a Terminal app already installed. It's ready to go out of the box.</li>
+            <li><strong>Linux</strong><br>
+              Terminal is built into the system and used often. If you ever use Linux, you'll get comfortable with it quickly.</li>
+          </ul>
+
+          <p>You don't need to memorize these names. Just know: your computer already has a terminal you just need to find it.</p>
+
+          <h3 id="linux-and-dual-boot">What About Linux and "Dual Boot"?</h3>
+
+          <p>You might hear people in college talking about using <strong>Linux</strong> or setting up a <strong>dual boot system</strong>.</p>
+
+          <p>Here's what that means in plain terms:</p>
+
+          <ul>
+            <li><strong>Linux</strong> is another operating system kind of like Windows or macOS that's popular among computer science people (If you see someone saying "I use Arch btw", you should consider running).</li>
+            <li><strong>Dual booting</strong> means installing both two operating systems (OS) on your laptop, so you can pick one when you turn it on.</li>
+          </ul>
+
+          <p>Some students do this because many CS tools are designed with Linux in mind.</p>
+
+          <p>You can probably get away with WSL or your macOS terminal in the first year, but in case you wish to dual boot, follow the tutorials.</p>
+
+          <h2 id="git-and-github">6. Git and GitHub: Saving Your Work Like a Pro</h2>
+
+          <p>One of the first things you'll learn and one of the most useful habits to build is <strong>version control</strong>.</p>
+
+          <p><strong>What is it?</strong><br>
+          Version control is just a smart way of saving your work. But instead of saving one file over and over again, you save each step or version. That way, if something breaks, or you want to go back and check what you changed, you can do that easily.</p>
+
+          <h3 id="enter-git">Enter Git</h3>
+
+          <p>Git is a tool that helps you do version control on your own computer.</p>
+
+          <p>It keeps track of changes you make to files over time. If you're writing code for a class, a project, or even just practicing, Git makes it easy to save versions, go back to earlier ones, and avoid the nightmare of "final_final_THISone.c" file names.</p>
+
+          <h3 id="enter-github">Enter GitHub</h3>
+
+          <p>Git lives on your computer. GitHub is where you send that work online.</p>
+
+          <p>GitHub is a website that connects with Git to:</p>
+          <ul>
+            <li>Back up your code safely online</li>
+            <li>Help you access your work from anywhere</li>
+            <li>Let you share your projects with others</li>
+            <li>Make teamwork easier if you're working in groups</li>
+          </ul>
+
+          <p>Together, Git and GitHub let you track your work and back it up (This is what major companies use in the industry believe it or not)</p>
+
+          <h3 id="two-ways-to-use-git">Two Ways to Use Git and GitHub</h3>
+
+          <p>You don't <em>have</em> to use the terminal to work with Git and GitHub. You've got two main paths:</p>
+
+          <ul>
+            <li><strong>Option 1: Terminal Git</strong><br>
+              You use a few Git commands inside your terminal to save your progress and send updates to GitHub. It's the most flexible way, and you'll see it used a lot in labs and tutorials.</li>
+            <li><strong>Option 2: GitHub Desktop</strong><br>
+              This is an official app with a simple interface just click buttons to commit, push, and sync. Perfect if you're not ready for the terminal yet. You can download it from <a href="https://desktop.github.com/" target="_blank" rel="noopener noreferrer">desktop.github.com</a>.</li>
+          </ul>
+
+          <p>You can switch between these anytime. Start with what feels comfortable. Personally I've gone through plenty of Terminal tutorials but have always felt comfortable with GitHub Desktop.</p>
+
+          <h3 id="installing-git">Installing Git (One-Time Setup)</h3>
+
+          <p>Before you use Git whether with GitHub Desktop or the terminal you need to install it.</p>
+
+          <p>Here's how:</p>
+
+          <ul>
+            <li><strong>Windows</strong><br>
+              Download the installer from <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer">git-scm.com</a><br>
+              Run the setup and follow the default options — no need to change anything<br>
+              After installation, you can use Git in Windows Terminal, Command Prompt, or PowerShell</li>
+            <li><strong>macOS</strong><br>
+              Git is often already installed<br>
+              If it's not, your Mac will offer to install it the first time you try to use it<br>
+              Or you can install it via <a href="https://brew.sh/" target="_blank" rel="noopener noreferrer">Homebrew</a> if you decide to use that later</li>
+            <li><strong>Linux</strong><br>
+              Git is usually pre-installed<br>
+              If it isn't, you can install it using your package manager (don't worry — your Linux setup guide will walk you through it if needed)</li>
+          </ul>
+
+          <p>Once Git is installed, your system is ready to use either the terminal or GitHub Desktop.</p>
+
+          <p>Git and GitHub will come up again throughout your CS journey in group projects, assignments, internships, and more. You're not expected to know everything about them right now. Just knowing that these tools exist, what they're meant for, and how to install them already gives you a solid head start.</p>
+
+          <h2 id="browsers-and-extensions">7. Browsers & Extensions: Choose Your Weapon</h2>
+
+          <p>Let's talk browsers.</p>
+
+          <p>Yeah, the thing you probably already use to watch YouTube or check your email. But in CS, your browser becomes way more than that — it's where you'll explore docs, test websites, run cloud-based tools, and even write and submit assignments. So picking the right one actually matters.</p>
+
+          <h3 id="common-browsers">Common Browsers for Dev Work (and Why You Might Pick One Over the Other)</h3>
+
+          <p>Here's a quick run-through of the browsers you'll come across, and what each one is good (or not-so-good) at:</p>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Browser</th>
+                <th>Pros</th>
+                <th>Cons</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Google Chrome</strong></td>
+                <td>Most popular, excellent dev tools, tons of extensions</td>
+                <td>Heavy on RAM, privacy concerns</td>
+              </tr>
+              <tr>
+                <td><strong>Mozilla Firefox</strong></td>
+                <td>Open source, great privacy, solid dev tools</td>
+                <td>Some sites are still optimized more for Chrome</td>
+              </tr>
+              <tr>
+                <td><strong>Microsoft Edge</strong></td>
+                <td>Built on the same engine as Chrome (Chromium), surprisingly fast</td>
+                <td>Tied into Microsoft ecosystem, may feel redundant</td>
+              </tr>
+              <tr>
+                <td><strong>Brave</strong></td>
+                <td>Focus on privacy, built-in ad/tracker blocking, Chrome extension support</td>
+                <td>Newer, occasional site compatibility issues</td>
+              </tr>
+              <tr>
+                <td><strong>Opera GX</strong></td>
+                <td>Built for gamers, RAM/CPU limiter, cool design</td>
+                <td>Not standard for dev work, more flashy than practical</td>
+              </tr>
+              <tr>
+                <td><strong>Safari</strong> (macOS only)</td>
+                <td>Optimized for Mac hardware, energy efficient</td>
+                <td>Limited dev extensions, not ideal for cross-platform work</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <blockquote>
+            <p>TL;DR:<br>
+            - <strong>Go with Chrome or Firefox</strong> for most dev tasks.<br>
+            - <strong>Try Brave</strong> if you care about privacy but still want Chrome's engine.<br>
+            - <strong>Opera GX</strong> is fun, but not super common in dev circles.</p>
+          </blockquote>
+
+          <p>There are a lot more different browsers you can explore for different aesthetics and needs like Zen, Arc etc.</p>
+
+          <h3 id="useful-extensions">Optional: Extensions You Might Like</h3>
+
+          <p>Once you're settled on a browser, you can boost it with some handy tools (they're called extensions).</p>
+
+          <p>Some good ones to start with:</p>
+
+          <ul>
+            <li><strong>Dark Reader</strong> - Adds dark mode to every website</li>
+            <li><strong>uBlock Origin</strong> - Powerful ad and tracker blocker</li>
+            <li><strong>Wappalyzer</strong> - Tells you what tech a site is using (great for web dev)</li>
+            <li><strong>Octotree</strong> - Adds a file-tree for GitHub repos (makes browsing code easier)</li>
+            <li><strong>JSON Viewer</strong> - Makes raw JSON files readable in your browser</li>
+            <li><strong>React Developer Tools</strong> - For debugging React apps (once you get there)</li>
+          </ul>
+
+          <p>These aren't must-haves, but once you start browsing a lot of docs, GitHub projects, or working with JSON data, they'll make your life a little easier.</p>
+
+          <p>That's pretty much it for browsers - stick with one that works for your system, and customize it as you go.</p>
+
+          <h2 id="markdown-and-note-taking">8. Markdown and Note-Taking Tools: Nerd Notes Made Simple</h2>
+
+          <p>Okay, real talk: <strong>note-taking is underrated in CS</strong>.</p>
+
+          <p>You'll be Googling stuff all the time: errors, definitions, weird compiler flags, commands and if you don't write anything down, it's easy to forget what worked and what didn't. Having your own notes is like building a personal cheat sheet you can keep coming back to.</p>
+
+          <h3 id="what-is-markdown">What Even Is Markdown?</h3>
+
+          <p>Before we talk apps, let's talk format.</p>
+
+          <p><strong>Markdown</strong> is a lightweight way to write and format text using plain text. It's kind of like the halfway point between typing in Notepad and formatting a Google Doc.</p>
+
+          <p>With Markdown, you can:</p>
+
+          <ul>
+            <li>Write clean, distraction-free notes</li>
+            <li>Add headings, lists, bold/italic text, links, and images using simple symbols</li>
+            <li>Turn your notes into nicely formatted documents (especially useful later for READMEs and documentation)</li>
+          </ul>
+
+          <p>Example:</p>
+          <pre><code class="language-markdown"># This is a Heading
+- This is a bullet point
+**BOLD**
+_italic_</code></pre>
+
+          <p>This entire document has actually been written and curated in Markdown!</p>
+
+          <p>You'll see Markdown used everywhere — GitHub, Obsidian, Notion, even in README files for projects.</p>
+
+          <blockquote>
+            <p>TL;DR: Learn Markdown. It'll make your notes cleaner and more portable.</p>
+          </blockquote>
+
+          <h3 id="note-taking-tools">Popular Note-Taking Tools (and Why You'd Use Them)</h3>
+
+          <p>Here are some common options CS students use. Each has its own vibe.</p>
+
+          <h4>Obsidian</h4>
+
+          <ul>
+            <li>Works offline, stores notes as Markdown files</li>
+            <li>Excellent for linking ideas (great for big projects or studying)</li>
+            <li>Super customizable</li>
+            <li>Great for people who like folders, files, and structure</li>
+          </ul>
+
+          <p><strong>Use it if</strong>: You like clean, local notes that you fully control</p>
+
+          <h4>Notion</h4>
+
+          <ul>
+            <li>All-in-one workspace with blocks (text, tables, to-do lists, etc.)</li>
+            <li>Cloud-based and accessible from anywhere</li>
+            <li>Great for organizing projects, wikis, and collaborative work</li>
+          </ul>
+
+          <p><strong>Use it if</strong>: You like drag-and-drop and want something more visual</p>
+
+          <h4>Google Keep / Apple Notes</h4>
+
+          <ul>
+            <li>Super fast and simple</li>
+            <li>Good for jotting down quick thoughts or copying error messages</li>
+            <li>Syncs easily across devices</li>
+          </ul>
+
+          <p><strong>Use them if</strong>: You want low-effort, fast-access notes on mobile or web</p>
+
+          <h4>The Good Old Reliable Book</h4>
+
+          <p>Yep, physical notebook. Don't underestimate it.</p>
+
+          <ul>
+            <li>Zero distractions</li>
+            <li>Fastest way to sketch ideas or diagrams</li>
+            <li>Great for journaling your thought process or debugging steps</li>
+            <li>Doesn't crash, run out of battery, or need syncing</li>
+          </ul>
+
+          <p><strong>Use it if</strong>: You think better on paper or want to unplug while working through a tough bug</p>
+
+          <h3 id="comparing-tools">Comparing the Tools</h3>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Tool</th>
+                <th>Markdown Support</th>
+                <th>Works Offline</th>
+                <th>Syncs Across Devices</th>
+                <th>Good For</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Obsidian</strong></td>
+                <td>✅ Yes</td>
+                <td>✅ Yes</td>
+                <td>✅ (with setup)</td>
+                <td>Deep notes, linking ideas</td>
+              </tr>
+              <tr>
+                <td><strong>Notion</strong></td>
+                <td>⚠️ Sort of</td>
+                <td>❌ No</td>
+                <td>✅ Yes</td>
+                <td>Collaboration, visual structure</td>
+              </tr>
+              <tr>
+                <td><strong>Google Keep</strong></td>
+                <td>❌ No</td>
+                <td>✅ Yes</td>
+                <td>✅ Yes</td>
+                <td>Quick notes, reminders</td>
+              </tr>
+              <tr>
+                <td><strong>Apple Notes</strong></td>
+                <td>❌ No</td>
+                <td>✅ Yes</td>
+                <td>✅ (Apple devices)</td>
+                <td>System-native simplicity</td>
+              </tr>
+              <tr>
+                <td><strong>Joplin</strong></td>
+                <td>✅ Yes</td>
+                <td>✅ Yes</td>
+                <td>✅ Yes</td>
+                <td>Open source alternative</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>You don't have to pick just one. A common setup might look like:</p>
+
+          <ul>
+            <li><strong>Use Google Keep</strong> to jot ideas or copy paste error messages quickly</li>
+            <li><strong>Use Obsidian</strong> for actual study notes or documentation</li>
+            <li><strong>Use Notion</strong> for semester planning, to-do lists, or group projects</li>
+            <li><strong>Use a Notebook</strong> for Lecture notes and diagrams</li>
+          </ul>
+
+          <p>Start with whatever feels the easiest. But once coursework picks up, having a structured note system can save you hours of frustration later.</p>
+        </div>
+      </main>
+
+      <!-- Table of Contents Sidebar -->
+      <aside class="hidden lg:block w-64 shrink-0">
+        <div class="sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto py-8">
+          <TableOfContents headings={headings} />
+        </div>
+      </aside>
+    </div>
+  </div>
+</Layout>

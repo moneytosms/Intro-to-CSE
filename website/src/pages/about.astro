@@ -1,0 +1,83 @@
+---
+import Layout from '@/layouts/Layout.astro';
+---
+
+<Layout title="About - Intro to CSE" 
+  showGlassyBackground={true}
+  glassyConfig={{
+    color: "rgba(6, 182, 212, 0.1)",
+    opacity: 0.2,
+    blur: "18px"
+  }}
+>
+  <div class="container max-w-4xl py-6 lg:py-10">
+    <div class="flex flex-col items-start gap-4 md:flex-row md:justify-between md:gap-8">
+      <div class="flex-1 space-y-4">
+        <h1 class="inline-block font-heading text-4xl tracking-tight lg:text-5xl">
+          About This Guide
+        </h1>
+        <p class="text-xl text-muted-foreground">
+          Your friendly, no-nonsense introduction to Computer Science and Engineering.
+        </p>
+      </div>
+    </div>
+    <hr class="my-8" />
+    <div class="prose prose-neutral dark:prose-invert max-w-none">
+      <h2>What is this guide?</h2>
+      <p>
+        <strong>Intro to CSE</strong> is a comprehensive guide designed specifically for students who are just starting their journey in Computer Science and Engineering. Unlike dense academic textbooks or scattered online tutorials, this guide provides a clear, structured path from complete beginner to confident CS student.
+      </p>
+
+      <h2>Who is this for?</h2>
+      <ul>
+        <li><strong>High school students</strong> considering CS as a major</li>
+        <li><strong>College freshmen</strong> who just declared CS but feel overwhelmed</li>
+        <li><strong>Career changers</strong> looking to break into tech</li>
+        <li><strong>Self-taught programmers</strong> who want to fill in knowledge gaps</li>
+        <li><strong>Anyone curious</strong> about what CS really involves</li>
+      </ul>
+
+      <h2>What makes this different?</h2>
+      <p>
+        This guide cuts through the noise. Instead of bombarding you with every possible programming language and framework, we focus on:
+      </p>
+      <ul>
+        <li><strong>Practical advice</strong> you can actually use</li>
+        <li><strong>Real talk</strong> about what CS is actually like</li>
+        <li><strong>Step-by-step guidance</strong> without overwhelming complexity</li>
+        <li><strong>Community resources</strong> to help you connect with others</li>
+        <li><strong>Learning strategies</strong> that actually work</li>
+      </ul>
+
+      <h2>The story behind this guide</h2>
+      <p>
+        This guide was born out of frustration with the lack of accessible, practical resources for CS beginners. Too many students start their CS journey feeling lost, overwhelmed by endless choices, or confused by academic jargon.
+      </p>
+      <p>
+        We believe that learning CS should be approachable, practical, and dare we say it—actually enjoyable. This guide is our attempt to make that a reality.
+      </p>
+
+      <h2>Open source and community-driven</h2>
+      <p>
+        This guide is completely open source and free. It's built by students, for students, with contributions from the community. Found something confusing? Have a suggestion? We'd love to hear from you.
+      </p>
+
+      <div class="flex gap-4 mt-8">
+        <a
+          href="https://github.com/moneytosms/Intro-to-CSE"
+          target="_blank"
+          rel="noreferrer"
+          class="inline-flex h-10 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground ring-offset-background transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+        >
+          View on GitHub
+        </a>
+        <a
+          href="/contribute"
+          class="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+        >
+          Contribute
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>

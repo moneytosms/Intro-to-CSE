@@ -1,0 +1,291 @@
+---
+// Part 4 page
+import Layout from '@/layouts/Layout.astro';
+import TableOfContents from '@/components/TableOfContents.astro';
+
+const headings = [
+  { depth: 2, slug: 'learn-how-to-learn-cs', text: 'Learn How to Learn CS' },
+  { depth: 3, slug: 'problem-solving-first', text: 'Problem-Solving First, Syntax Second' },
+  { depth: 3, slug: 'memory-hacks', text: 'Memory Hacks That Actually Help' },
+  { depth: 3, slug: 'cs-not-just-coding', text: 'CS Is Not Just About Coding' },
+  { depth: 3, slug: 'working-on-hard-problems', text: 'Working on "Hard" Problems Without Giving Up' },
+  { depth: 2, slug: 'asking-for-help', text: 'Asking for Help Without Feeling Dumb' },
+  { depth: 3, slug: 'ask-good-questions', text: 'Ask Good Questions, Get Good Answers' },
+  { depth: 3, slug: 'where-to-ask', text: 'Where to Ask' },
+  { depth: 3, slug: 'ask-people-around-you', text: 'Ask the People Around You' },
+  { depth: 2, slug: 'navigating-year-one', text: 'Navigating Year One: Surviving Your First CS Semester' },
+  { depth: 3, slug: 'what-to-expect-courses', text: 'What to Expect in Courses' },
+  { depth: 3, slug: 'labs-assignments-evaluations', text: 'How Labs, Assignments, and Evaluations Work' },
+  { depth: 3, slug: 'college-reset-button', text: 'College Is a Reset Button' },
+];
+---
+
+<Layout 
+  title="Part 4: How to Actually Learn CS - Intro to CSE"
+  showGlassyBackground={true}
+  glassyConfig={{
+    color: "rgba(236, 72, 153, 0.12)",
+    opacity: 0.24,
+    blur: "32px"
+  }}
+>
+  <div class="container max-w-screen-2xl">
+    <!-- Navigation breadcrumb -->
+    <div class="py-4">
+      <nav class="flex items-center space-x-2 text-sm text-muted-foreground">
+        <a href="/" class="hover:text-foreground transition-colors">Home</a>
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m9 18 6-6-6-6"></path>
+        </svg>
+        <span class="font-medium text-foreground">Part 4: How to Actually Learn CS</span>
+      </nav>
+    </div>
+    
+    <div class="flex flex-1 gap-6 md:gap-10">
+      <!-- Main content -->
+      <main class="flex-1 min-w-0">
+        <div class="prose prose-gray dark:prose-invert max-w-none">
+          <div class="mb-8 space-y-4">
+            <h1 class="text-4xl font-bold tracking-tight lg:text-5xl">
+              Part 4: How to Actually Learn CS
+            </h1>
+            <p class="text-xl text-muted-foreground">
+              Master the art of learning computer science and develop effective study strategies.
+            </p>
+          </div>
+
+          <p>Studying computer science is different from cramming facts for a history exam. You're not just memorizing, you're building mental muscles for problem-solving, logic, and pattern recognition.</p>
+
+          <p>Let's talk about how to make that easier and more enjoyable (or at least less frustrating).</p>
+
+          <h2 id="learn-how-to-learn-cs">12. Learn How to Learn CS</h2>
+
+          <p>When your code breaks (and it will), you need to think like a detective.</p>
+
+          <p>Instead of panicking or blaming yourself, ask:</p>
+          <ul>
+            <li>What's happening?</li>
+            <li>What did I expect to happen?</li>
+            <li>Where do those two diverge?</li>
+          </ul>
+
+          <p>Learning to trace the logic of a program, even if you didn't write it is a major part of your CS journey. Debugging teaches you how to read code, not just write it.</p>
+
+          <blockquote>
+            <p>Start treating bugs as puzzles, not failures.</p>
+          </blockquote>
+
+          <h3 id="problem-solving-first">Problem-Solving First, Syntax Second</h3>
+
+          <p>When you're learning something new, don't obsess over remembering every semicolon or keyword.</p>
+
+          <p>Focus first on:</p>
+          <ul>
+            <li>What is the problem asking?</li>
+            <li>How would I solve this without code?</li>
+            <li>What's the rough logic or flow?</li>
+          </ul>
+
+          <p>Once you have a plan, <em>then</em> figure out the syntax. It's easier to translate a solution into code than to "code your way" into a solution.</p>
+
+          <blockquote>
+            <p>Think first, type later.</p>
+          </blockquote>
+
+          <p>Also it's totally fine to use <strong>AI tools like ChatGPT</strong> or <strong>Copilot</strong> to check your logic, get unstuck, or understand a concept. But depending on them <em>too much</em> can backfire. If you skip the thinking and just copy answers, it'll catch up to you when the real tests and interviews hit. Use AI like a tutor, not a crutch.</p>
+
+          <h3 id="memory-hacks">Memory Hacks That Actually Help</h3>
+
+          <p>CS is logic-heavy, but there are still facts to remember like how loops work, or what a function does.</p>
+
+          <p>Here are some study methods that work well:</p>
+
+          <ul>
+            <li><strong>Active Recall</strong><br>
+              Don't just reread notes. Ask yourself questions and try to answer from memory.</li>
+            <li><strong>The Feynman Technique</strong><br>
+              Pick a topic, and try to explain it like you're teaching a 10-year-old. If you can't, you've found the gap in your understanding.</li>
+            <li><strong>Spaced Repetition</strong><br>
+              Use flashcard apps like Anki or create your own notes and review key ideas over time not all at once.</li>
+            <li><strong>Code-First Learning</strong><br>
+              Read a new concept, then try using it in a small snippet or playground project.</li>
+          </ul>
+
+          <blockquote>
+            <p>The best learning is hands-on and slightly uncomfortable. If you feel like you're guessing, you're probably learning.</p>
+          </blockquote>
+
+          <h3 id="cs-not-just-coding">CS Is Not Just About Coding</h3>
+
+          <p>Don't fall into the trap of thinking CS is just about writing programs. It's also about understanding the systems behind them.</p>
+
+          <p>You'll run into:</p>
+          <ul>
+            <li><strong>Math-heavy courses</strong> like Discrete Mathematics, Probability, and Linear Algebra</li>
+            <li><strong>Logic and proofs</strong> that feel more like puzzles than equations</li>
+            <li><strong>Theory-focused subjects</strong> like Algorithms or Automata</li>
+            <li><strong>Hardware-related topics</strong> like Digital Logic or Computer Architecture</li>
+          </ul>
+
+          <p>It's okay if these parts feel foreign or tough. CS is a broad field and not everyone excels in every area right away. But the non-coding stuff teaches you <em>how computers work</em>, and that's essential for building solid mental models later on.</p>
+
+          <blockquote>
+            <p>Treat it like learning a new language: at first it's clumsy, but over time it clicks.</p>
+          </blockquote>
+
+          <h3 id="working-on-hard-problems">Working on "Hard" Problems Without Giving Up</h3>
+
+          <p>Everyone hits walls in CS. Even experienced devs get stuck.</p>
+
+          <p>Here's what helps:</p>
+          <ul>
+            <li><strong>Break the problem down</strong> - smaller parts are less scary</li>
+            <li><strong>Rubber ducking</strong> - explain your issue out loud to anything (yes, even a rubber duck)</li>
+            <li><strong>Step away</strong> - a short break or a walk can bring clarity</li>
+            <li><strong>Work with others</strong> - sometimes you need a second brain</li>
+            <li><strong>Google it</strong> - seriously, it's not cheating</li>
+          </ul>
+
+          <p>Progress in CS often feels non-linear. One day, everything clicks. Until then, frustration is part of the process. Learn to sit with it, and push through bit by bit.</p>
+
+          <blockquote>
+            <p>TL;DR: CS isn't about being a genius, it's about being persistent, curious, and okay with failing forward.</p>
+          </blockquote>
+
+          <h2 id="asking-for-help">13. Asking for Help Without Feeling Dumb</h2>
+
+          <p>Here's the truth: <strong>everyone</strong> needs help in CS. Yes, even the people who seem like they have it all figured out.</p>
+
+          <p>But a lot of beginners hesitate to ask questions because they're afraid of looking stupid. The real mistake? <em>Not asking at all.</em></p>
+
+          <p>Let's break down how to ask for help the right way, without the shame spiral.</p>
+
+          <h3 id="ask-good-questions">Ask Good Questions, Get Good Answers</h3>
+
+          <p>When you say, "My code isn't working," no one knows where to start. But when you say:</p>
+
+          <blockquote>
+            <p>"Hey, I'm trying to write a function that finds duplicates in a list. It works for some inputs but fails when the list has mixed data types. Here's the code I wrote..."</p>
+          </blockquote>
+
+          <p>Suddenly, you're giving context, and people can actually help.</p>
+
+          <p>The gold standard here is a <strong>Minimal Reproducible Example (MRE)</strong>. It just means:</p>
+          <ul>
+            <li>Share only the code that causes the issue (no extra clutter)</li>
+            <li>Describe what the code is <em>supposed</em> to do</li>
+            <li>Explain what actually happens instead</li>
+          </ul>
+
+          <p>You don't have to be perfect but you just need to be clear.</p>
+
+          <h3 id="where-to-ask">Where to Ask</h3>
+
+          <h4>Stack Overflow</h4>
+          <p>It can seem intimidating at first, but it's <em>the</em> place for technical answers. If you're stuck on an error, someone probably asked about it before.</p>
+
+          <p>Before posting, search for your issue. If you do post, be detailed and specific.</p>
+
+          <blockquote>
+            <p>And if you run into a problem <em>no one</em> has asked about on Stack Overflow? Congrats, you've unlocked a <strong>real</strong> CS puzzle. Good luck, soldier.</p>
+          </blockquote>
+
+          <h4>Reddit</h4>
+          <p>Subs like <a href="https://www.reddit.com/r/learnprogramming/" target="_blank" rel="noopener noreferrer"><code>r/learnprogramming</code></a> or <a href="https://www.reddit.com/r/csmajors/" target="_blank" rel="noopener noreferrer"><code>r/csmajors</code></a> are full of students like you.<br>
+          It's more casual, and you'll often find people sharing real experiences, resources, and beginner-friendly advice.</p>
+
+          <h4>AI Tools</h4>
+          <p>Sometimes you just need a quick explanation, an error decoded, or someone to rubber-duck with AI tools like ChatGPT, Claude, or even Gemini can help:</p>
+          <ul>
+            <li>Break down errors in simple terms</li>
+            <li>Explain concepts you're stuck on</li>
+            <li>Help brainstorm how to approach a problem</li>
+          </ul>
+
+          <blockquote>
+            <p>Just remember: don't let AI <em>think</em> for you, instead use it to <strong>refine</strong> your thinking, not replace it.</p>
+          </blockquote>
+
+          <h4>Official Docs and Guides</h4>
+          <p>It's tempting to avoid documentation, but once you get used to reading it, it becomes your best friend. It's where all the real, up-to-date stuff lives even if it takes a few reads to click.</p>
+
+          <h3 id="ask-people-around-you">Ask the People Around You</h3>
+
+          <h4>Don't Shy Away from Professors or TAs</h4>
+          <p>They might seem intimidating, but they're literally paid to help you learn.<br>
+          If they have <strong>office hours</strong>, that's your golden ticket. Show up, ask questions (even if they seem basic), and get clarity from the people grading your work.</p>
+
+          <h4>Your Friends and Seniors</h4>
+          <p>Sometimes your best resource is someone who just did the same assignment last semester. Ask your batchmates, or reach out to a friendly senior who seems chill.
+           Don't overthink it. Most people are happy to help if you're putting in effort and not just trying to offload work.</p>
+
+          <blockquote>
+            <p>"I don't get this" is a valid question.<br>
+            Asking shows you're trying. Staying quiet just slows you down.</p>
+          </blockquote>
+
+          <h2 id="navigating-year-one">14. Navigating Year One: Surviving Your First CS Semester</h2>
+
+          <p>Starting your CS degree can feel like being dropped into a game with no tutorial. Suddenly, you're hearing words like "object-oriented programming," "recursion," and "truth tables," and wondering what you've signed up for.</p>
+
+          <p>Let's walk through what your first year might actually look like, and how to not just survive it, but maybe even enjoy parts of it.</p>
+
+          <h3 id="what-to-expect-courses">What to Expect in Courses</h3>
+
+          <p>In your first semester, expect a mix of:</p>
+
+          <ul>
+            <li><strong>Programming Fundamentals</strong> — Your first real exposure to writing code. You'll build logic, mess up loops, and debug like your life depends on it. This is where your "CS" journey <em>visibly</em> starts.</li>
+            <li><strong>IT Workshop-type Classes</strong> — You might be introduced to basic tools, OS commands, or productivity tech. These help you get used to the development environment.</li>
+            <li><strong>Mathematics</strong> — Discrete Math is the usual suspect. Expect topics like logic, sets, functions, and proofs. It feels like abstract math, but it lays the groundwork for everything from algorithms to security.</li>
+            <li><strong>Digital Design / Circuits</strong> — A taste of electronics. You'll learn how computers work at the gate and flip-flop level. It'll be weird if you've never done electronics before, but trust the process.</li>
+            <li><strong>Soft Skills or Communication Courses</strong> — Yes, these matter. You'll have presentations, write-ups, and discussions. All of which help when it's time to explain your code to a real person.</li>
+            <li><strong>A Foreign Language or Humanities Course</strong> — Sometimes you just need a change of pace. And yes, these do count in your grade.</li>
+          </ul>
+
+          <blockquote>
+            <p>I personally only started realizing how everything connects toward the end of my second semester. Things will click slowly. Don't rush it.</p>
+          </blockquote>
+
+          <h3 id="labs-assignments-evaluations">How Labs, Assignments, and Evaluations Work</h3>
+
+          <p>Here's what the rhythm usually looks like:</p>
+
+          <ul>
+            <li><strong>Labs</strong> come with continuous evaluations, lab exams, and vivas. It's not just about submitting working code, you'll have to explain it too.</li>
+            <li><strong>Assignments and Quizzes</strong> usually have combined marks. How many quizzes or assignments you get, and how the weight is split? That's entirely up to your professor.</li>
+            <li><strong>Theory Courses</strong> may seem simple until the first midsem knocks you off your seat. Keep steady.</li>
+          </ul>
+
+          <blockquote>
+            <p>And yes, always do the practical, even if you feel like you've got it under your belt. That confidence fades real fast during the viva.</p>
+          </blockquote>
+
+          <p>Do not miss out on your assignments or quizzes, they do carry a certain amount of weight.</p>
+
+          <h3 id="college-reset-button">College Is a Reset Button</h3>
+
+          <p>This is the best time to reinvent yourself. You get to decide who you want to be, not just academically but socially too.</p>
+
+          <ul>
+            <li>Join clubs, even if you think you won't "fit in"</li>
+            <li>Attend events, it helps you stay in touch with what's happening</li>
+            <li>Talk to people, the conversations you have outside class often teach you more than the ones inside</li>
+            <li>Eat more than just cup noodles. Your stomach (and grades) will thank you.</li>
+          </ul>
+
+          <blockquote>
+            <p>TL;DR: Your first year is a mess, and that's normal. Just stay consistent, stay open to learning, and get involved. The CS part will come together as you go.</p>
+          </blockquote>
+        </div>
+      </main>
+
+      <!-- Table of Contents Sidebar -->
+      <aside class="hidden lg:block w-64 shrink-0">
+        <div class="sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto py-8">
+          <TableOfContents headings={headings} />
+        </div>
+      </aside>
+    </div>
+  </div>
+</Layout>
