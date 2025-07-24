@@ -48,6 +48,28 @@ import Layout from '@/layouts/Layout.astro';
 }}</code></pre>
       </div>
 
+      <!-- Amber Glass -->
+      <div class="border rounded-lg p-4 backdrop-blur-sm bg-white/5">
+        <h2 class="text-2xl font-semibold mb-4">Amber Glass Effect</h2>
+        <div style="width: 100%; height: 200px; position: relative; border-radius: 8px; overflow: hidden; backdrop-filter: blur(28px); background: linear-gradient(135deg, rgba(245, 158, 11, 0.12) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(245, 158, 11, 0.12) 100%);"></div>
+        <pre class="mt-4 bg-muted p-4 rounded text-sm overflow-x-auto"><code>glassyConfig={{
+  color: "rgba(245, 158, 11, 0.12)",
+  opacity: 0.26,
+  blur: "28px"
+}}</code></pre>
+      </div>
+
+      <!-- Pink Glass -->
+      <div class="border rounded-lg p-4 backdrop-blur-sm bg-white/5">
+        <h2 class="text-2xl font-semibold mb-4">Pink Glass Effect</h2>
+        <div style="width: 100%; height: 200px; position: relative; border-radius: 8px; overflow: hidden; backdrop-filter: blur(32px); background: linear-gradient(135deg, rgba(236, 72, 153, 0.12) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(236, 72, 153, 0.12) 100%);"></div>
+        <pre class="mt-4 bg-muted p-4 rounded text-sm overflow-x-auto"><code>glassyConfig={{
+  color: "rgba(236, 72, 153, 0.12)",
+  opacity: 0.24,
+  blur: "32px"
+}}</code></pre>
+      </div>
+
       <!-- Configuration Options -->
       <div class="border rounded-lg p-4 backdrop-blur-sm bg-white/5">
         <h2 class="text-2xl font-semibold mb-4">Configuration Options</h2>
@@ -79,107 +101,6 @@ import Layout from '@/layouts/Layout.astro';
                 <td>string</td>
                 <td>"20px"</td>
                 <td>Backdrop blur intensity (CSS blur value)</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
-</Layout>
-  scale={1.5}
-  gridMul={[2, 1]}
-  digitSize={1.5}
-  timeScale={0.3}
-  scanlineIntensity={0.3}
-  glitchAmount={1}
-  flickerAmount={1}
-  tint="#00ff41"
-  mouseReact={true}
-  brightness={0.9}
-/&gt;</code></pre>
-      </div>
-
-      <!-- High Glitch Terminal -->
-      <div class="border rounded-lg p-4 backdrop-blur-sm bg-white/5">
-        <h2 class="text-2xl font-semibold mb-4">Amber Glass Effect</h2>
-        <div style="width: 100%; height: 200px; position: relative; border-radius: 8px; overflow: hidden; backdrop-filter: blur(28px); background: linear-gradient(135deg, rgba(245, 158, 11, 0.12) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(245, 158, 11, 0.12) 100%);"></div>
-        <pre class="mt-4 bg-muted p-4 rounded text-sm overflow-x-auto"><code>glassyConfig={{
-  color: "rgba(245, 158, 11, 0.12)",
-  opacity: 0.26,
-  blur: "28px"
-}}</code></pre>
-      </div>
-
-      <!-- Retro CRT Style -->
-      <div class="border rounded-lg p-4 backdrop-blur-sm bg-white/5">
-        <h2 class="text-2xl font-semibold mb-4">Pink Glass Effect</h2>
-        <div style="width: 100%; height: 200px; position: relative; border-radius: 8px; overflow: hidden; backdrop-filter: blur(32px); background: linear-gradient(135deg, rgba(236, 72, 153, 0.12) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(236, 72, 153, 0.12) 100%);"></div>
-        <pre class="mt-4 bg-muted p-4 rounded text-sm overflow-x-auto"><code>glassyConfig={{
-  color: "rgba(236, 72, 153, 0.12)",
-  opacity: 0.24,
-  blur: "32px"
-}}</code></pre>
-      </div> 
-  client:load
-  mouseRepulsion={true}
-  mouseInteraction={true}
-  density={1.2}
-  glowIntensity={0.6}
-  saturation={0.7}
-  hueShift={120}
-/&gt;</code></pre>
-      </div>
-
-      <!-- Configuration Options -->
-      <div class="border rounded-lg p-4">
-        <h2 class="text-2xl font-semibold mb-4">Configuration Options</h2>
-        <div class="prose">
-          <table class="w-full">
-            <thead>
-              <tr>
-                <th>Prop</th>
-                <th>Type</th>
-                <th>Default</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><code>mouseRepulsion</code></td>
-                <td>boolean</td>
-                <td>false</td>
-                <td>If true, stars move away from mouse; if false, they're attracted to it</td>
-              </tr>
-              <tr>
-                <td><code>mouseInteraction</code></td>
-                <td>boolean</td>
-                <td>true</td>
-                <td>Whether stars react to mouse movement at all</td>
-              </tr>
-              <tr>
-                <td><code>density</code></td>
-                <td>number</td>
-                <td>1.0</td>
-                <td>Star density multiplier (higher = more stars)</td>
-              </tr>
-              <tr>
-                <td><code>glowIntensity</code></td>
-                <td>number</td>
-                <td>0.3</td>
-                <td>How bright/glowy the stars appear</td>
-              </tr>
-              <tr>
-                <td><code>saturation</code></td>
-                <td>number</td>
-                <td>0.6</td>
-                <td>Color saturation (0 = grayscale, 1 = full color)</td>
-              </tr>
-              <tr>
-                <td><code>hueShift</code></td>
-                <td>number</td>
-                <td>280</td>
-                <td>Base hue for star colors (0-360)</td>
               </tr>
             </tbody>
           </table>

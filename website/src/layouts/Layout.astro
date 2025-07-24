@@ -64,7 +64,14 @@ const {
     <div class="relative flex min-h-screen flex-col">
       {showLetterGlitch && (
         <div class="fixed inset-0 z-0">
-          <LetterGlitch client:only="react" {...letterGlitchConfig} />
+          <LetterGlitch 
+            client:only="react" 
+            glitchColors={letterGlitchConfig.glitchColors}
+            glitchSpeed={letterGlitchConfig.glitchSpeed}
+            centerVignette={letterGlitchConfig.centerVignette}
+            outerVignette={letterGlitchConfig.outerVignette}
+            smooth={letterGlitchConfig.smooth}
+          />
         </div>
       )}
       {showGlassyBackground && (
