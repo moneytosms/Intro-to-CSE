@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.5.10",
-    "@astrojs/mdx": "^2.3.1",
+    "@astrojs/mdx": "^4.3.1",
     "@astrojs/react": "^3.1.0",
     "@astrojs/sitemap": "^3.1.1",
     "@astrojs/tailwind": "^5.1.0",
@@ -21,9 +21,10 @@
     "@radix-ui/react-scroll-area": "^1.0.5",
     "@radix-ui/react-separator": "^1.0.3",
     "@radix-ui/react-slot": "^1.0.2",
-    "astro": "^4.5.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "cursor-flashlight": "^1.0.1",
+    "gsap": "^3.13.0",
     "lucide-react": "^0.363.0",
     "ogl": "^1.0.11",
     "prismjs": "^1.29.0",
@@ -38,7 +39,8 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",
     "@types/react": "^18.2.79",
-    "@types/react-dom": "^18.2.22"
+    "@types/react-dom": "^18.2.22",
+    "astro": "^5.12.3"
   },
   "engines": {
     "node": ">=18.0.0"
