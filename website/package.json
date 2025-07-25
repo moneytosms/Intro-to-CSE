@@ -43,7 +43,7 @@
     "astro": "^5.12.3"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": "20.x"
   },
   "optionalDependencies": {
     "@rollup/rollup-win32-x64-msvc": "^4.45.1"
