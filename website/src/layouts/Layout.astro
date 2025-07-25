@@ -119,7 +119,7 @@ const {
   // Animate gradient position on scroll and theme change for modern effect
   if (typeof window !== 'undefined') {
     function updateGradientBg() {
-      const el = document.querySelector('.gradient-bg');
+      const el = document.querySelector('.gradient-bg') as HTMLElement;
       if (!el) return;
       const scrollY = window.scrollY || window.pageYOffset;
       const max = document.body.scrollHeight - window.innerHeight;
