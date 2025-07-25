@@ -1,5 +1,11 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "framework": "astro"
+  "framework": "astro",
+  "installCommand": "npm install",
+  "devCommand": "npm run dev",
+  "env": {
+    "ROLLUP_NO_NATIVE": "true",
+    "ASTRO_ROLLUP_NATIVE": "false"
+  }
 }
