@@ -40,12 +40,10 @@
     "@tailwindcss/typography": "^0.5.10",
     "@types/react": "^18.2.79",
     "@types/react-dom": "^18.2.22",
-    "astro": "^5.12.3"
+    "astro": "^5.12.3",
+    "rollup": "^3.29.4"
   },
   "engines": {
     "node": "20.x"
-  },
-  "optionalDependencies": {
-    "@rollup/rollup-win32-x64-msvc": "^4.45.1"
   }
 }
