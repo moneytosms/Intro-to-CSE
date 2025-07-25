@@ -2,3 +2,4 @@ node_modules
 .astro
 dist
 .env*
+package-lock.json
