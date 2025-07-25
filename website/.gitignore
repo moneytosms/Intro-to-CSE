@@ -10,6 +10,9 @@ dist/
 build/
 .astro/
 
+# Snowpack dependency directory
+web_modules/
+
 # Environment variables
 .env
 .env.local
@@ -38,6 +41,9 @@ jspm_packages/
 
 # Optional eslint cache
 .eslintcache
+
+# TypeScript cache
+*.tsbuildinfo
 
 # Optional REPL history
 .node_repl_history
@@ -102,3 +108,9 @@ logs
 # Temporary folders
 tmp/
 temp/
+
+
+#Ignore insiders AI rules
+.github/copilot-instructions.md
+=======
+
