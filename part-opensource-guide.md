@@ -111,5 +111,3 @@ For students, active participation can be showcased in:
 Engaging with open source is not merely a technical exercise; it is a practice in collaborative knowledge-building, civic-mindedness, and professional self-development. For the Indian student or early-career developer, it offers an intersection of skill acquisition, networking, and societal contribution. The first step may be as small as correcting a typographical error, but the cumulative journey can redefine your professional trajectory.
 
 ---
-
-If you wish, I can now **extend this into a “Beginner-to-Maintainer Pathway” chart** that visually maps the progression for an Indian student—from their first PR to becoming a core contributor. That would make this guide even more actionable.
