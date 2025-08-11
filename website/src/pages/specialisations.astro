@@ -1,0 +1,287 @@
+---
+// Specialisations index page
+import Layout from '@/layouts/Layout.astro';
+import { BeamsBackground } from '@/components/BeamsBackground.tsx';
+---
+
+<Layout 
+  title="CS Specialisations - Intro to CSE" 
+  description="Explore different computer science specialisations and find your perfect career path in AI/ML, Cybersecurity, Web Development, Data Science, Systems Programming, and Competitive Programming."
+  showGlassyBackground={false}
+>
+  <BeamsBackground client:load intensity="medium" className="fixed inset-0 -z-10">
+  </BeamsBackground>
+  <!-- Hero Section -->
+  <section id="gsap-hero" class="container space-y-8 pb-10 pt-10 md:pb-16 md:pt-16 lg:py-36 relative z-20">
+    <div class="mx-auto flex max-w-[980px] flex-col items-center gap-4 text-center">
+      <div class="flex items-center space-x-3 mb-6 bg-gradient-to-br from-[#23272f99] via-[#1a1d23cc] to-[#23272f99] backdrop-blur-xl border border-[#a259ff] shadow-2xl rounded-2xl p-6">
+        <svg class="h-14 w-14 text-primary drop-shadow-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.582a.5.5 0 0 1 0 .962L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
+        </svg>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-white drop-shadow-xl">
+          CS Specialisations
+        </h1>
+      </div>
+      <div class="bg-gradient-to-br from-[#23272f99] via-[#1a1d23cc] to-[#23272f99] backdrop-blur-xl border border-[#a259ff] shadow-xl rounded-2xl p-8 max-w-[750px]">
+        <p class="text-xl md:text-2xl text-[#d1b3ff] font-medium">
+          Discover your path in computer science. Each specialisation offers unique opportunities and exciting challenges.<br>
+          <span class="text-[#a259ff]">Find the one that sparks your curiosity and matches your goals.</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specialisations Grid -->
+  <section id="gsap-specialisations" class="container space-y-6 py-8 dark:bg-transparent md:py-12 lg:py-24 relative z-20">
+    <div class="mx-auto grid justify-center gap-8 sm:grid-cols-1 md:max-w-[90rem] md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
+      
+      <!-- AI & Machine Learning -->
+      <div id="ai-ml" class="relative overflow-hidden rounded-2xl border border-[#a259ff] bg-gradient-to-br from-[#23272f99] via-[#1a1d23cc] to-[#23272f99] backdrop-blur-xl shadow-xl p-10 hover:shadow-2xl transition-all hover:scale-105">
+        <div class="flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-[#a259ff] to-[#7f3cff] mb-6">
+          <svg class="h-8 w-8 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+            <circle cx="12" cy="12" r="3"></circle>
+          </svg>
+        </div>
+        <div class="space-y-4">
+          <h3 class="font-bold text-2xl text-[#a259ff]">AI & Machine Learning</h3>
+          <p class="text-base text-[#d1b3ff] leading-relaxed">
+            Dive into the world of artificial intelligence and machine learning. Build intelligent systems that can learn, adapt, and make decisions. Explore neural networks, deep learning, natural language processing, and computer vision.
+          </p>
+          <div class="space-y-2">
+            <h4 class="font-semibold text-[#a259ff]">Key Areas:</h4>
+            <ul class="text-sm text-[#d1b3ff] space-y-1">
+              <li>• Neural Networks & Deep Learning</li>
+              <li>• Natural Language Processing</li>
+              <li>• Computer Vision</li>
+              <li>• Reinforcement Learning</li>
+            </ul>
+          </div>
+          <div class="space-y-2">
+            <h4 class="font-semibold text-[#a259ff]">Popular Tools:</h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-[#a259ff]/20 text-[#a259ff] rounded-full text-xs">Python</span>
+              <span class="px-3 py-1 bg-[#a259ff]/20 text-[#a259ff] rounded-full text-xs">TensorFlow</span>
+              <span class="px-3 py-1 bg-[#a259ff]/20 text-[#a259ff] rounded-full text-xs">PyTorch</span>
+              <span class="px-3 py-1 bg-[#a259ff]/20 text-[#a259ff] rounded-full text-xs">Scikit-learn</span>
+            </div>
+          </div>
+        </div>
+        <a href="/specialisations/ai-ml" class="absolute inset-0" aria-label="AI & Machine Learning Specialisation"></a>
+      </div>
+
+      <!-- Competitive Programming -->
+      <div id="competitive" class="relative overflow-hidden rounded-2xl border border-[#a259ff] bg-gradient-to-br from-[#23272f99] via-[#1a1d23cc] to-[#23272f99] backdrop-blur-xl shadow-xl p-10 hover:shadow-2xl transition-all hover:scale-105">
+        <div class="flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-[#9932cc] to-[#ff6b35] mb-6">
+          <svg class="h-8 w-8 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+            <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+            <path d="M4 22h16"></path>
+            <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+            <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+            <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+          </svg>
+        </div>
+        <div class="space-y-4">
+          <h3 class="font-bold text-2xl text-[#9932cc]">Competitive Programming</h3>
+          <p class="text-base text-[#d1b3ff] leading-relaxed">
+            Master the art of algorithmic problem-solving. Develop lightning-fast coding skills and deep understanding of data structures through contests and challenges.
+          </p>
+          <div class="space-y-2">
+            <h4 class="font-semibold text-[#9932cc]">Key Areas:</h4>
+            <ul class="text-sm text-[#d1b3ff] space-y-1">
+              <li>• Algorithms & Data Structures</li>
+              <li>• Dynamic Programming</li>
+              <li>• Graph Theory & Number Theory</li>
+              <li>• Contest Strategies & Time Management</li>
+            </ul>
+          </div>
+          <div class="space-y-2">
+            <h4 class="font-semibold text-[#9932cc]">Popular Platforms:</h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-[#9932cc]/20 text-[#9932cc] rounded-full text-xs">Codeforces</span>
+              <span class="px-3 py-1 bg-[#9932cc]/20 text-[#9932cc] rounded-full text-xs">LeetCode</span>
+              <span class="px-3 py-1 bg-[#9932cc]/20 text-[#9932cc] rounded-full text-xs">AtCoder</span>
+              <span class="px-3 py-1 bg-[#9932cc]/20 text-[#9932cc] rounded-full text-xs">TopCoder</span>
+            </div>
+          </div>
+        </div>
+        <a href="/specialisations/competitive-programming" class="absolute inset-0" aria-label="Competitive Programming Specialisation"></a>
+      </div>
+
+      <!-- Cybersecurity -->
+      <div id="cybersecurity" class="relative overflow-hidden rounded-2xl border border-[#a259ff] bg-gradient-to-br from-[#23272f99] via-[#1a1d23cc] to-[#23272f99] backdrop-blur-xl shadow-xl p-10 hover:shadow-2xl transition-all hover:scale-105">
+        <div class="flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-[#ff6b35] to-[#a259ff] mb-6">
+          <svg class="h-8 w-8 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
+            <circle cx="12" cy="16" r="1"></circle>
+            <path d="m7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        </div>
+        <div class="space-y-4">
+          <h3 class="font-bold text-2xl text-[#ff6b35]">Cybersecurity</h3>
+          <p class="text-base text-[#d1b3ff] leading-relaxed">
+            Become a digital guardian protecting systems, networks, and data from cyber threats. Learn ethical hacking, cryptography, network security, and incident response to safeguard our digital world.
+          </p>
+          <div class="space-y-2">
+            <h4 class="font-semibold text-[#ff6b35]">Key Areas:</h4>
+            <ul class="text-sm text-[#d1b3ff] space-y-1">
+              <li>• Ethical Hacking & Penetration Testing</li>
+              <li>• Network & System Security</li>
+              <li>• Cryptography & Digital Forensics</li>
+              <li>• Incident Response & Risk Assessment</li>
+            </ul>
+          </div>
+          <div class="space-y-2">
+            <h4 class="font-semibold text-[#ff6b35]">Popular Tools:</h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-[#ff6b35]/20 text-[#ff6b35] rounded-full text-xs">Kali Linux</span>
+              <span class="px-3 py-1 bg-[#ff6b35]/20 text-[#ff6b35] rounded-full text-xs">Wireshark</span>
+              <span class="px-3 py-1 bg-[#ff6b35]/20 text-[#ff6b35] rounded-full text-xs">Metasploit</span>
+              <span class="px-3 py-1 bg-[#ff6b35]/20 text-[#ff6b35] rounded-full text-xs">Nmap</span>
+            </div>
+          </div>
+        </div>
+        <a href="/specialisations/cybersecurity" class="absolute inset-0" aria-label="Cybersecurity Specialisation"></a>
+      </div>
+
+      <!-- Game Development -->
+      <div id="game-dev" class="relative overflow-hidden rounded-2xl border border-[#a259ff] bg-gradient-to-br from-[#23272f99] via-[#1a1d23cc] to-[#23272f99] backdrop-blur-xl shadow-xl p-10 hover:shadow-2xl transition-all hover:scale-105">
+        <div class="flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-[#61dca3] to-[#2b4539] mb-6">
+          <svg class="h-8 w-8 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect>
+            <path d="M12 18h.01"></path>
+            <circle cx="12" cy="13" r="3"></circle>
+          </svg>
+        </div>
+        <div class="space-y-4">
+          <h3 class="font-bold text-2xl text-[#61dca3]">Game Development</h3>
+          <p class="text-base text-[#d1b3ff] leading-relaxed">
+            Create immersive gaming experiences that entertain millions. Master game engines, graphics programming, and interactive storytelling to build the next generation of games.
+          </p>
+          <div class="space-y-2">
+            <h4 class="font-semibold text-[#61dca3]">Key Areas:</h4>
+            <ul class="text-sm text-[#d1b3ff] space-y-1">
+              <li>• Game Engine Development</li>
+              <li>• Graphics & Shader Programming</li>
+              <li>• Game Design & Mechanics</li>
+              <li>• VR/AR Development</li>
+            </ul>
+          </div>
+          <div class="space-y-2">
+            <h4 class="font-semibold text-[#61dca3]">Popular Tools:</h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-[#61dca3]/20 text-[#61dca3] rounded-full text-xs">Unity</span>
+              <span class="px-3 py-1 bg-[#61dca3]/20 text-[#61dca3] rounded-full text-xs">Unreal Engine</span>
+              <span class="px-3 py-1 bg-[#61dca3]/20 text-[#61dca3] rounded-full text-xs">Godot</span>
+              <span class="px-3 py-1 bg-[#61dca3]/20 text-[#61dca3] rounded-full text-xs">Blender</span>
+            </div>
+          </div>
+        </div>
+        <a href="/specialisations/game-development" class="absolute inset-0" aria-label="Game Development Specialisation"></a>
+      </div>
+
+      <!-- Open Source -->
+      <div id="opensource" class="relative overflow-hidden rounded-2xl border border-[#a259ff] bg-gradient-to-br from-[#23272f99] via-[#1a1d23cc] to-[#23272f99] backdrop-blur-xl shadow-xl p-10 hover:shadow-2xl transition-all hover:scale-105">
+        <div class="flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-[#61b3dc] to-[#1a4d5c] mb-6">
+          <svg class="h-8 w-8 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M12 1v6m0 6v6"></path>
+            <path d="m15.14 8.86 4.24-4.24"></path>
+            <path d="m4.86 19.14 4.24-4.24"></path>
+            <path d="m8.86 8.86-4.24-4.24"></path>
+            <path d="m19.14 19.14-4.24-4.24"></path>
+          </svg>
+        </div>
+        <div class="space-y-4">
+          <h3 class="font-bold text-2xl text-[#61b3dc]">Open Source</h3>
+          <p class="text-base text-[#d1b3ff] leading-relaxed">
+            Contribute to projects that impact millions of users worldwide. Learn collaborative development, community building, and how to make meaningful contributions to open source projects.
+          </p>
+          <div class="space-y-2">
+            <h4 class="font-semibold text-[#61b3dc]">Key Areas:</h4>
+            <ul class="text-sm text-[#d1b3ff] space-y-1">
+              <li>• Project Contribution & Maintenance</li>
+              <li>• Community Management</li>
+              <li>• Documentation & Testing</li>
+              <li>• License & Legal Considerations</li>
+            </ul>
+          </div>
+          <div class="space-y-2">
+            <h4 class="font-semibold text-[#61b3dc]">Popular Platforms:</h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-[#61b3dc]/20 text-[#61b3dc] rounded-full text-xs">GitHub</span>
+              <span class="px-3 py-1 bg-[#61b3dc]/20 text-[#61b3dc] rounded-full text-xs">GitLab</span>
+              <span class="px-3 py-1 bg-[#61b3dc]/20 text-[#61b3dc] rounded-full text-xs">Apache</span>
+              <span class="px-3 py-1 bg-[#61b3dc]/20 text-[#61b3dc] rounded-full text-xs">Linux Foundation</span>
+            </div>
+          </div>
+        </div>
+        <a href="/specialisations/opensource" class="absolute inset-0" aria-label="Open Source Specialisation"></a>
+      </div>
+
+      <!-- Web Development -->
+      <div id="web-dev" class="relative overflow-hidden rounded-2xl border border-[#a259ff] bg-gradient-to-br from-[#23272f99] via-[#1a1d23cc] to-[#23272f99] backdrop-blur-xl shadow-xl p-10 hover:shadow-2xl transition-all hover:scale-105">
+        <div class="flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-[#7f3cff] to-[#9932cc] mb-6">
+          <svg class="h-8 w-8 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16,18 22,12 16,6"></polyline>
+            <polyline points="8,6 2,12 8,18"></polyline>
+          </svg>
+        </div>
+        <div class="space-y-4">
+          <h3 class="font-bold text-2xl text-[#7f3cff]">Web Development</h3>
+          <p class="text-base text-[#d1b3ff] leading-relaxed">
+            Create modern, responsive web applications that power the digital world. Master both frontend and backend technologies to build full-stack applications that users love.
+          </p>
+          <div class="space-y-2">
+            <h4 class="font-semibold text-[#7f3cff]">Key Areas:</h4>
+            <ul class="text-sm text-[#d1b3ff] space-y-1">
+              <li>• Frontend: React, Vue, Angular</li>
+              <li>• Backend: Node.js, Django, Express</li>
+              <li>• Databases: MongoDB, PostgreSQL</li>
+              <li>• Cloud Deployment & DevOps</li>
+            </ul>
+          </div>
+          <div class="space-y-2">
+            <h4 class="font-semibold text-[#7f3cff]">Popular Tools:</h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-[#7f3cff]/20 text-[#7f3cff] rounded-full text-xs">React</span>
+              <span class="px-3 py-1 bg-[#7f3cff]/20 text-[#7f3cff] rounded-full text-xs">Node.js</span>
+              <span class="px-3 py-1 bg-[#7f3cff]/20 text-[#7f3cff] rounded-full text-xs">Next.js</span>
+              <span class="px-3 py-1 bg-[#7f3cff]/20 text-[#7f3cff] rounded-full text-xs">TypeScript</span>
+            </div>
+          </div>
+        </div>
+        <a href="/specialisations/web-development" class="absolute inset-0" aria-label="Web Development Specialisation"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section id="gsap-cta" class="container py-12 md:py-16 lg:py-28 relative z-20">
+    <div class="bg-gradient-to-br from-[#23272f99] via-[#1a1d23cc] to-[#23272f99] backdrop-blur-xl border border-[#a259ff] shadow-2xl rounded-2xl p-12">
+      <div class="mx-auto flex max-w-[980px] flex-col items-center gap-4 text-center">
+        <h2 class="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight text-white drop-shadow-xl">
+          Ready to Choose Your Path?
+        </h2>
+        <p class="max-w-[600px] text-xl md:text-2xl text-[#d1b3ff] font-medium">
+          Remember, you don't have to choose just one. Many successful careers combine multiple specialisations.
+        </p>
+        <div class="flex flex-col gap-4 sm:flex-row sm:gap-8 mt-8">
+          <a
+            href="/part1"
+            class="inline-flex h-12 items-center justify-center rounded-xl bg-gradient-to-r from-[#a259ff] to-[#7f3cff] px-10 text-base font-semibold text-white shadow-lg ring-offset-background transition-all hover:scale-105 hover:from-[#7f3cff] hover:to-[#a259ff] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#a259ff] focus-visible:ring-offset-2"
+          >
+            Start Your Journey
+          </a>
+          <a
+            href="/"
+            class="inline-flex h-12 items-center justify-center rounded-xl border border-[#a259ff] bg-gradient-to-r from-[#23272f99] to-[#1a1d23cc] px-10 text-base font-semibold text-[#a259ff] shadow-lg ring-offset-background transition-all hover:scale-105 hover:bg-[#a259ff] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#a259ff] focus-visible:ring-offset-2"
+          >
+            Back to Home
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

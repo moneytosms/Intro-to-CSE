@@ -164,4 +164,141 @@ import LandingAnimations from "../components/LandingAnimations.tsx";
       </div>
     </div>
   </section>
+
+  <!-- Specialisations Section -->
+  <section id="gsap-specialisations" class="container space-y-6 py-8 dark:bg-transparent md:py-12 lg:py-24 relative">
+    <div class="backdrop-blur-sm bg-background/80 rounded-lg p-8 border border-[#a259ff]">
+      <div class="mx-auto flex max-w-[980px] flex-col items-center gap-2 text-center">
+        <h2 class="text-3xl font-bold leading-[1.1] sm:text-3xl md:text-4xl text-white">
+          Ready to Dive Deeper?
+        </h2>
+        <p class="max-w-[750px] text-lg text-[#d1b3ff] sm:text-xl">
+          Explore different specialisations in computer science and find your perfect path forward.
+        </p>
+      </div>
+      
+      <div class="mx-auto grid justify-center gap-6 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 mt-10">
+        <!-- AI/ML Card -->
+        <div class="relative overflow-hidden rounded-2xl border border-[#a259ff] bg-gradient-to-br from-[#23272f99] via-[#1a1d23cc] to-[#23272f99] backdrop-blur-xl shadow-xl p-8 hover:shadow-2xl transition-all hover:scale-105">
+          <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-[#a259ff] to-[#7f3cff]">
+            <svg class="h-7 w-7 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </div>
+          <div class="space-y-2 mt-4">
+            <h3 class="font-bold text-lg text-[#a259ff]">AI & Machine Learning</h3>
+            <p class="text-base text-[#d1b3ff]">
+              Build intelligent systems and explore neural networks, deep learning, and data science.
+            </p>
+          </div>
+          <a href="/specialisations/ai-ml" class="absolute inset-0" aria-label="AI & Machine Learning Specialisation"></a>
+        </div>
+
+        <!-- Competitive Programming Card -->
+        <div class="relative overflow-hidden rounded-2xl border border-[#a259ff] bg-gradient-to-br from-[#23272f99] via-[#1a1d23cc] to-[#23272f99] backdrop-blur-xl shadow-xl p-8 hover:shadow-2xl transition-all hover:scale-105">
+          <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-[#9932cc] to-[#ff6b35]">
+            <svg class="h-7 w-7 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+              <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+              <path d="M4 22h16"></path>
+              <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+              <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+              <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+            </svg>
+          </div>
+          <div class="space-y-2 mt-4">
+            <h3 class="font-bold text-lg text-[#9932cc]">Competitive Programming</h3>
+            <p class="text-base text-[#d1b3ff]">
+              Master algorithms and data structures through contests and problem-solving challenges.
+            </p>
+          </div>
+          <a href="/specialisations/competitive-programming" class="absolute inset-0" aria-label="Competitive Programming Specialisation"></a>
+        </div>
+
+        <!-- Cybersecurity Card -->
+        <div class="relative overflow-hidden rounded-2xl border border-[#a259ff] bg-gradient-to-br from-[#23272f99] via-[#1a1d23cc] to-[#23272f99] backdrop-blur-xl shadow-xl p-8 hover:shadow-2xl transition-all hover:scale-105">
+          <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-[#ff6b35] to-[#a259ff]">
+            <svg class="h-7 w-7 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
+              <circle cx="12" cy="16" r="1"></circle>
+              <path d="m7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+          </div>
+          <div class="space-y-2 mt-4">
+            <h3 class="font-bold text-lg text-[#ff6b35]">Cybersecurity</h3>
+            <p class="text-base text-[#d1b3ff]">
+              Protect systems from threats and learn ethical hacking, network security, and cryptography.
+            </p>
+          </div>
+          <a href="/specialisations/cybersecurity" class="absolute inset-0" aria-label="Cybersecurity Specialisation"></a>
+        </div>
+
+        <!-- Game Development Card -->
+        <div class="relative overflow-hidden rounded-2xl border border-[#a259ff] bg-gradient-to-br from-[#23272f99] via-[#1a1d23cc] to-[#23272f99] backdrop-blur-xl shadow-xl p-8 hover:shadow-2xl transition-all hover:scale-105">
+          <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-[#61dca3] to-[#2b4539]">
+            <svg class="h-7 w-7 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect>
+              <path d="M12 18h.01"></path>
+              <circle cx="12" cy="13" r="3"></circle>
+            </svg>
+          </div>
+          <div class="space-y-2 mt-4">
+            <h3 class="font-bold text-lg text-[#61dca3]">Game Development</h3>
+            <p class="text-base text-[#d1b3ff]">
+              Create immersive gaming experiences using game engines, graphics, and interactive design.
+            </p>
+          </div>
+          <a href="/specialisations/game-development" class="absolute inset-0" aria-label="Game Development Specialisation"></a>
+        </div>
+
+        <!-- Open Source Card -->
+        <div class="relative overflow-hidden rounded-2xl border border-[#a259ff] bg-gradient-to-br from-[#23272f99] via-[#1a1d23cc] to-[#23272f99] backdrop-blur-xl shadow-xl p-8 hover:shadow-2xl transition-all hover:scale-105">
+          <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-[#61b3dc] to-[#1a4d5c]">
+            <svg class="h-7 w-7 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M12 1v6m0 6v6"></path>
+              <path d="m15.14 8.86 4.24-4.24"></path>
+              <path d="m4.86 19.14 4.24-4.24"></path>
+              <path d="m8.86 8.86-4.24-4.24"></path>
+              <path d="m19.14 19.14-4.24-4.24"></path>
+            </svg>
+          </div>
+          <div class="space-y-2 mt-4">
+            <h3 class="font-bold text-lg text-[#61b3dc]">Open Source</h3>
+            <p class="text-base text-[#d1b3ff]">
+              Contribute to projects that impact millions and learn collaborative development.
+            </p>
+          </div>
+          <a href="/specialisations/opensource" class="absolute inset-0" aria-label="Open Source Specialisation"></a>
+        </div>
+
+        <!-- Web Development Card -->
+        <div class="relative overflow-hidden rounded-2xl border border-[#a259ff] bg-gradient-to-br from-[#23272f99] via-[#1a1d23cc] to-[#23272f99] backdrop-blur-xl shadow-xl p-8 hover:shadow-2xl transition-all hover:scale-105">
+          <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-[#7f3cff] to-[#9932cc]">
+            <svg class="h-7 w-7 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16,18 22,12 16,6"></polyline>
+              <polyline points="8,6 2,12 8,18"></polyline>
+            </svg>
+          </div>
+          <div class="space-y-2 mt-4">
+            <h3 class="font-bold text-lg text-[#7f3cff]">Web Development</h3>
+            <p class="text-base text-[#d1b3ff]">
+              Create modern web applications using frontend, backend, and full-stack technologies.
+            </p>
+          </div>
+          <a href="/specialisations/web-development" class="absolute inset-0" aria-label="Web Development Specialisation"></a>
+        </div>
+      </div>
+      
+      <div class="text-center mt-8">
+        <a
+          href="/specialisations"
+          class="inline-flex h-12 items-center justify-center rounded-xl bg-gradient-to-r from-[#a259ff] to-[#7f3cff] px-10 text-base font-semibold text-white shadow-lg ring-offset-background transition-all hover:scale-105 hover:from-[#7f3cff] hover:to-[#a259ff] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#a259ff] focus-visible:ring-offset-2"
+        >
+          Explore All Specialisations
+        </a>
+      </div>
+    </div>
+  </section>
 </Layout>

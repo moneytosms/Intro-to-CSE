@@ -27,6 +27,7 @@
     "cursor-flashlight": "^1.0.1",
     "gsap": "^3.13.0",
     "lucide-react": "^0.363.0",
+    "motion": "^12.23.12",
     "ogl": "^1.0.11",
     "prismjs": "^1.29.0",
     "react": "^18.2.0",

@@ -1,0 +1,121 @@
+---
+// Web Development Specialisation page
+import Layout from '@/layouts/Layout.astro';
+import TableOfContents from '@/components/TableOfContents.astro';
+
+const headings = [
+  { depth: 2, slug: 'coming-soon', text: 'Coming Soon' },
+];
+---
+
+<Layout 
+  title="Web Development Specialisation - Intro to CSE"
+  showGlassyBackground={true}
+  glassyConfig={{
+    color: "rgba(127, 60, 255, 0.12)",
+    opacity: 0.25,
+    blur: "30px"
+  }}
+>
+  <div class="container max-w-screen-2xl">
+    <!-- Navigation breadcrumb -->
+    <div class="py-4">
+      <nav class="flex items-center space-x-2 text-sm text-muted-foreground">
+        <a href="/" class="hover:text-foreground transition-colors">Home</a>
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m9 18 6-6-6-6"></path>
+        </svg>
+        <a href="/specialisations" class="hover:text-foreground transition-colors">Specialisations</a>
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m9 18 6-6-6-6"></path>
+        </svg>
+        <span class="font-medium text-foreground">Web Development</span>
+      </nav>
+    </div>
+    
+    <div class="flex flex-1 gap-6 md:gap-10">
+      <!-- Main content -->
+      <main class="flex-1 min-w-0">
+        <div class="prose prose-gray dark:prose-invert max-w-none">
+          <div class="mb-8 space-y-4">
+            <div class="flex items-center space-x-4 mb-6">
+              <div class="flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-[#7f3cff] to-[#9932cc]">
+                <svg class="h-8 w-8 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16,18 22,12 16,6"></polyline>
+                  <polyline points="8,6 2,12 8,18"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h1 class="text-4xl font-bold tracking-tight lg:text-5xl text-[#7f3cff]">
+                  Web Development
+                </h1>
+                <p class="text-xl text-muted-foreground">
+                  Create modern web applications that power the digital world.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-br from-[#23272f99] via-[#1a1d23cc] to-[#23272f99] backdrop-blur-xl border border-[#7f3cff] shadow-xl rounded-2xl p-8 text-center">
+            <div class="flex justify-center mb-6">
+              <div class="flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-[#7f3cff]/20 to-[#9932cc]/20 border border-[#7f3cff]/30">
+                <svg class="h-10 w-10 text-[#7f3cff]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 6v6l4 2"></path>
+                </svg>
+              </div>
+            </div>
+            
+            <h2 id="coming-soon" class="text-3xl font-bold text-[#7f3cff] mb-4">Coming Soon</h2>
+            <p class="text-lg text-[#d1b3ff] mb-6 max-w-2xl mx-auto">
+              We're building a complete web development roadmap from beginner to expert. 
+              This section will cover frontend, backend, full-stack development, and 
+              modern web technologies you need to master.
+            </p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 text-sm">
+              <div class="bg-[#7f3cff]/10 rounded-lg p-4">
+                <h3 class="font-semibold text-[#7f3cff] mb-2">Frontend</h3>
+                <p class="text-[#d1b3ff]">React, Vue, Angular</p>
+              </div>
+              <div class="bg-[#7f3cff]/10 rounded-lg p-4">
+                <h3 class="font-semibold text-[#7f3cff] mb-2">Backend</h3>
+                <p class="text-[#d1b3ff]">Node.js, Django, APIs</p>
+              </div>
+              <div class="bg-[#7f3cff]/10 rounded-lg p-4">
+                <h3 class="font-semibold text-[#7f3cff] mb-2">Databases</h3>
+                <p class="text-[#d1b3ff]">SQL, NoSQL, ORMs</p>
+              </div>
+              <div class="bg-[#7f3cff]/10 rounded-lg p-4">
+                <h3 class="font-semibold text-[#7f3cff] mb-2">DevOps</h3>
+                <p class="text-[#d1b3ff]">Cloud deployment</p>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/specialisations"
+                class="inline-flex h-12 items-center justify-center rounded-xl bg-gradient-to-r from-[#7f3cff] to-[#9932cc] px-8 text-base font-semibold text-white shadow-lg transition-all hover:scale-105"
+              >
+                Explore Other Specialisations
+              </a>
+              <a
+                href="/"
+                class="inline-flex h-12 items-center justify-center rounded-xl border border-[#7f3cff] bg-transparent px-8 text-base font-semibold text-[#7f3cff] transition-all hover:bg-[#7f3cff] hover:text-white"
+              >
+                Back to Home
+              </a>
+            </div>
+          </div>
+        </div>
+      </main>
+      
+      <!-- Table of Contents Sidebar -->
+      <aside class="hidden xl:block w-64 shrink-0">
+        <div class="sticky top-16">
+          <TableOfContents headings={headings} />
+        </div>
+      </aside>
+    </div>
+  </div>
+</Layout>

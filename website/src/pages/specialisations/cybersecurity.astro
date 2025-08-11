@@ -1,0 +1,122 @@
+---
+// Cybersecurity Specialisation page
+import Layout from '@/layouts/Layout.astro';
+import TableOfContents from '@/components/TableOfContents.astro';
+
+const headings = [
+  { depth: 2, slug: 'coming-soon', text: 'Coming Soon' },
+];
+---
+
+<Layout 
+  title="Cybersecurity Specialisation - Intro to CSE"
+  showGlassyBackground={true}
+  glassyConfig={{
+    color: "rgba(255, 107, 53, 0.12)",
+    opacity: 0.25,
+    blur: "30px"
+  }}
+>
+  <div class="container max-w-screen-2xl">
+    <!-- Navigation breadcrumb -->
+    <div class="py-4">
+      <nav class="flex items-center space-x-2 text-sm text-muted-foreground">
+        <a href="/" class="hover:text-foreground transition-colors">Home</a>
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m9 18 6-6-6-6"></path>
+        </svg>
+        <a href="/specialisations" class="hover:text-foreground transition-colors">Specialisations</a>
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m9 18 6-6-6-6"></path>
+        </svg>
+        <span class="font-medium text-foreground">Cybersecurity</span>
+      </nav>
+    </div>
+    
+    <div class="flex flex-1 gap-6 md:gap-10">
+      <!-- Main content -->
+      <main class="flex-1 min-w-0">
+        <div class="prose prose-gray dark:prose-invert max-w-none">
+          <div class="mb-8 space-y-4">
+            <div class="flex items-center space-x-4 mb-6">
+              <div class="flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-[#ff6b35] to-[#a259ff]">
+                <svg class="h-8 w-8 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
+                  <circle cx="12" cy="16" r="1"></circle>
+                  <path d="m7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+              </div>
+              <div>
+                <h1 class="text-4xl font-bold tracking-tight lg:text-5xl text-[#ff6b35]">
+                  Cybersecurity
+                </h1>
+                <p class="text-xl text-muted-foreground">
+                  Become a digital guardian protecting systems from cyber threats.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-br from-[#23272f99] via-[#1a1d23cc] to-[#23272f99] backdrop-blur-xl border border-[#ff6b35] shadow-xl rounded-2xl p-8 text-center">
+            <div class="flex justify-center mb-6">
+              <div class="flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-[#ff6b35]/20 to-[#a259ff]/20 border border-[#ff6b35]/30">
+                <svg class="h-10 w-10 text-[#ff6b35]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 6v6l4 2"></path>
+                </svg>
+              </div>
+            </div>
+            
+            <h2 id="coming-soon" class="text-3xl font-bold text-[#ff6b35] mb-4">Coming Soon</h2>
+            <p class="text-lg text-[#d1b3ff] mb-6 max-w-2xl mx-auto">
+              We're building a comprehensive cybersecurity curriculum for you. 
+              This section will cover ethical hacking, network security, cryptography, 
+              and hands-on security assessments.
+            </p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 text-sm">
+              <div class="bg-[#ff6b35]/10 rounded-lg p-4">
+                <h3 class="font-semibold text-[#ff6b35] mb-2">Ethical Hacking</h3>
+                <p class="text-[#d1b3ff]">Penetration testing</p>
+              </div>
+              <div class="bg-[#ff6b35]/10 rounded-lg p-4">
+                <h3 class="font-semibold text-[#ff6b35] mb-2">Network Security</h3>
+                <p class="text-[#d1b3ff]">Firewalls & monitoring</p>
+              </div>
+              <div class="bg-[#ff6b35]/10 rounded-lg p-4">
+                <h3 class="font-semibold text-[#ff6b35] mb-2">Cryptography</h3>
+                <p class="text-[#d1b3ff]">Encryption & protocols</p>
+              </div>
+              <div class="bg-[#ff6b35]/10 rounded-lg p-4">
+                <h3 class="font-semibold text-[#ff6b35] mb-2">Incident Response</h3>
+                <p class="text-[#d1b3ff]">Threat analysis</p>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/specialisations"
+                class="inline-flex h-12 items-center justify-center rounded-xl bg-gradient-to-r from-[#ff6b35] to-[#a259ff] px-8 text-base font-semibold text-white shadow-lg transition-all hover:scale-105"
+              >
+                Explore Other Specialisations
+              </a>
+              <a
+                href="/"
+                class="inline-flex h-12 items-center justify-center rounded-xl border border-[#ff6b35] bg-transparent px-8 text-base font-semibold text-[#ff6b35] transition-all hover:bg-[#ff6b35] hover:text-white"
+              >
+                Back to Home
+              </a>
+            </div>
+          </div>
+        </div>
+      </main>
+      
+      <!-- Table of Contents Sidebar -->
+      <aside class="hidden xl:block w-64 shrink-0">
+        <div class="sticky top-16">
+          <TableOfContents headings={headings} />
+        </div>
+      </aside>
+    </div>
+  </div>
+</Layout>
