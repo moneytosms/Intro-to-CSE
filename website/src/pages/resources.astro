@@ -1,0 +1,116 @@
+---
+import Layout from '@/layouts/Layout.astro';
+---
+
+<Layout title="CS Resources - Intro to CSE" description="Curated resources for learning computer science, programming, and more." showGlassyBackground={true} glassyConfig={{ color: "rgba(162, 89, 255, 0.1)", opacity: 0.15, blur: "25px" }}>
+  <section class="container py-16 md:py-24">
+    <div class="mx-auto max-w-3xl text-center">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-[#a259ff] mb-4">Resources</h1>
+      <p class="text-lg md:text-xl text-[#d1b3ff] mb-8">Really wanted to gatekeep this, but have fun !</p>
+    </div>
+    <div class="mx-auto max-w-4xl flex flex-col gap-12 mt-10">
+      <!-- Roadmaps & Guides -->
+      <section class="bg-gradient-to-br from-[#23272f99] via-[#1a1d23cc] to-[#23272f99] border border-[#a259ff] rounded-2xl p-6 shadow-xl">
+        <h2 class="text-2xl font-bold text-[#a259ff] mb-2">Roadmaps & Guides</h2>
+        <p class="text-[#d1b3ff] mb-2">Step-by-step structured paths for learning CSE concepts and careers.</p>
+        <ul class="list-disc list-inside text-[#d1b3ff] space-y-1">
+          <li><a href="https://roadmap.sh/" class="text-[#a259ff] underline hover:text-white" target="_blank">roadmap.sh</a>  - Learning paths and guides for multiple developer roles and technologies. </li>
+          <li><a href="https://www.theodinproject.com/" class="text-[#a259ff] underline hover:text-white" target="_blank">The Odin Project</a> - Web Development tutorials and course</li>
+          <li><a href="https://teachyourselfcs.com/" class="text-[#a259ff] underline hover:text-white" target="_blank">Teach Yourself CS</a> - Subject wise guide for best books and videos</li>
+          <li><a href="https://neetcode.io/roadmap" class="text-[#a259ff] underline hover:text-white" target="_blank">Neetcode</a> - Trackable Leetcode progress with solutions</li>
+        </ul>
+      </section>
+
+      <!-- Documentation & References -->
+      <section class="bg-gradient-to-br from-[#23272f99] via-[#1a1d23cc] to-[#23272f99] border border-[#a259ff] rounded-2xl p-6 shadow-xl">
+        <h2 class="text-2xl font-bold text-[#a259ff] mb-2">Documentation & References</h2>
+        <p class="text-[#d1b3ff] mb-2">Authoritative docs, language references, and quick lookup sites.</p>
+        <ul class="list-disc list-inside text-[#d1b3ff] space-y-1">
+          <li><a href="https://devdocs.io/" class="text-[#a259ff] underline hover:text-white" target="_blank">DevDocs</a> - Useful developer documentation with almost any framework you can think of.</li>
+          <li><a href="https://cplusplus.com/reference/" class="text-[#a259ff] underline hover:text-white" target="_blank">C++ Reference</a> - If you ever forget what that weird one liner function does in c++</li>
+          <li><a href="https://quickref.me/" class="text-[#a259ff] underline hover:text-white" target="_blank">Quickref.me</a> - Cheatsheet for common tech stacks and quick revision</li>
+        </ul>
+      </section>
+
+      <!-- Practice & Problem-Solving Platforms -->
+      <section class="bg-gradient-to-br from-[#23272f99] via-[#1a1d23cc] to-[#23272f99] border border-[#a259ff] rounded-2xl p-6 shadow-xl">
+        <h2 class="text-2xl font-bold text-[#a259ff] mb-2">Practice & Problem-Solving Platforms</h2>
+        <p class="text-[#d1b3ff] mb-2">Sites for coding challenges, exercises, and skill sharpening.</p>
+        <ul class="list-disc list-inside text-[#d1b3ff] space-y-1">
+          <li><a href="https://cses.fi/problemset/" class="text-[#a259ff] underline hover:text-white" target="_blank">CSES</a> - Scenario based questions to refine your logic </li>
+          <li><a href="https://exercism.org/" class="text-[#a259ff] underline hover:text-white" target="_blank">Exercism</a> - Learn and practice a variety of languages </li>
+          <li><a href="https://takeuforward.org/" class="text-[#a259ff] underline hover:text-white" target="_blank">Striver Sheets</a> - Some of the best DSA Problem sheets for practice</li>
+        </ul>
+      </section>
+
+      <!-- Courses & Lectures -->
+      <section class="bg-gradient-to-br from-[#23272f99] via-[#1a1d23cc] to-[#23272f99] border border-[#a259ff] rounded-2xl p-6 shadow-xl">
+        <h2 class="text-2xl font-bold text-[#a259ff] mb-2">Courses & Lectures</h2>
+        <p class="text-[#d1b3ff] mb-2">University-level open courses, MOOCs, YouTube playlists, and lecture notes.</p>
+        <ul class="list-disc list-inside text-[#d1b3ff] space-y-1">
+          <li><a href="https://ocw.mit.edu/" class="text-[#a259ff] underline hover:text-white" target="_blank">MIT OpenCourseWare</a> - A lot of college courses can be found here</li>
+          <li><a href="https://www.coursera.org/" class="text-[#a259ff] underline hover:text-white" target="_blank">Coursera</a></li>
+          <li><a href="https://www.youtube.com/c/Computerphile" class="text-[#a259ff] underline hover:text-white" target="_blank">Computerphile (YouTube)</a></li>
+        </ul>
+      </section>
+
+      <!-- Books & Archives -->
+      <section class="bg-gradient-to-br from-[#23272f99] via-[#1a1d23cc] to-[#23272f99] border border-[#a259ff] rounded-2xl p-6 shadow-xl">
+        <h2 class="text-2xl font-bold text-[#a259ff] mb-2">Books & Archives</h2>
+        <p class="text-[#d1b3ff] mb-2">Classic textbooks, ebooks, PDFs.</p>
+        <ul class="list-disc list-inside text-[#d1b3ff] space-y-1">
+          <li><a href="https://greenteapress.com/wp/think-python/" class="text-[#a259ff] underline hover:text-white" target="_blank">Think Python</a></li>
+          <li><a href="https://eloquentjavascript.net/" class="text-[#a259ff] underline hover:text-white" target="_blank">Eloquent JavaScript</a></li>
+          <li><a href="https://archive.org/details/texts" class="text-[#a259ff] underline hover:text-white" target="_blank">Internet Archive: Texts</a></li>
+        </ul>
+      </section>
+
+      <!-- Alternative Archives -->
+      <section class="bg-gradient-to-br from-[#23272f99] via-[#1a1d23cc] to-[#23272f99] border border-[#a259ff] rounded-2xl p-6 shadow-xl">
+        <h2 class="text-2xl font-bold text-[#a259ff] mb-2">Alternative Archives</h2>
+        <p class="text-[#d1b3ff] mb-2">Discreet sources for academic papers and books (use responsibly).</p>
+        <ul class="list-disc list-inside text-[#d1b3ff] space-y-1">
+          <li><a href="https://libgen.is/" class="text-[#a259ff] underline hover:text-white" target="_blank">Library Genesis (LibGen)</a></li>
+          <li><a href="https://sci-hub.se/" class="text-[#a259ff] underline hover:text-white" target="_blank">Sci-Hub</a></li>
+        </ul>
+      </section>
+
+      <!-- Tools & Utilities 
+      <section class="bg-gradient-to-br from-[#23272f99] via-[#1a1d23cc] to-[#23272f99] border border-[#a259ff] rounded-2xl p-6 shadow-xl">
+        <h2 class="text-2xl font-bold text-[#a259ff] mb-2">Tools & Utilities</h2>
+        <p class="text-[#d1b3ff] mb-2">IDEs, online compilers, student packs, sandboxes.</p>
+        <ul class="list-disc list-inside text-[#d1b3ff] space-y-1">
+          <li><a href="https://replit.com/" class="text-[#a259ff] underline hover:text-white" target="_blank">Replit</a></li>
+          <li><a href="https://codesandbox.io/" class="text-[#a259ff] underline hover:text-white" target="_blank">CodeSandbox</a></li>
+          <li><a href="https://visualstudio.microsoft.com/" class="text-[#a259ff] underline hover:text-white" target="_blank">Visual Studio Code</a></li>
+        </ul>
+      </section> -->
+
+      <!-- Communities & Networking 
+      <section class="bg-gradient-to-br from-[#23272f99] via-[#1a1d23cc] to-[#23272f99] border border-[#a259ff] rounded-2xl p-6 shadow-xl">
+        <h2 class="text-2xl font-bold text-[#a259ff] mb-2">Communities & Networking</h2>
+        <p class="text-[#d1b3ff] mb-2">Forums, Discord/Slack groups, subreddits, professional networks.</p>
+        <ul class="list-disc list-inside text-[#d1b3ff] space-y-1">
+          <li><a href="https://stackoverflow.com/" class="text-[#a259ff] underline hover:text-white" target="_blank">Stack Overflow</a></li>
+          <li><a href="https://dev.to/" class="text-[#a259ff] underline hover:text-white" target="_blank">DEV Community</a></li>
+          <li><a href="https://discord.gg/programming" class="text-[#a259ff] underline hover:text-white" target="_blank">Programming Discord</a></li>
+        </ul>
+      </section> -->
+
+      <!-- Research & Academic Resources -->
+      <section class="bg-gradient-to-br from-[#23272f99] via-[#1a1d23cc] to-[#23272f99] border border-[#a259ff] rounded-2xl p-6 shadow-xl">
+        <h2 class="text-2xl font-bold text-[#a259ff] mb-2">Research & Academic Resources</h2>
+        <p class="text-[#d1b3ff] mb-2">Papers, journals, preprints, libraries, archives.</p>
+        <ul class="list-disc list-inside text-[#d1b3ff] space-y-1">
+          <li><a href="https://arxiv.org/" class="text-[#a259ff] underline hover:text-white" target="_blank">arXiv</a></li>
+          <li><a href="https://scholar.google.com/" class="text-[#a259ff] underline hover:text-white" target="_blank">Google Scholar</a></li>
+          <li><a href="https://www.semanticscholar.org/" class="text-[#a259ff] underline hover:text-white" target="_blank">Semantic Scholar</a></li>
+        </ul>
+      </section>
+    </div>
+      <!-- IIITK Specific -->
+    <div class="mx-auto max-w-3xl text-center mt-16">
+      <p class="text-[#d1b3ff]">Have a great resource to suggest? <a href="/contribute" class="text-[#a259ff] underline hover:text-white">Contribute here</a>!</p>
+    </div>
+  </section>
+</Layout>
