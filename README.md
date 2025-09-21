@@ -1,4 +1,4 @@
-# CSE Degree for Dummies
+# CSE Degree for Everyone
 
 Your no-fluff, friendly guide to surviving and thriving in computer science. Without needing to decode ancient scrolls or debug your soul.
 
