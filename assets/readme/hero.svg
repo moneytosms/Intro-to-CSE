@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="t d">
+  <title id="t">CSE Degree for Everyone</title>
+  <desc id="d">A friendly beginner guide to computer science, in four parts: starting your CS journey, getting set up, finding your people and tools, and how to actually learn CS.</desc>
+  <rect width="1200" height="420" rx="26" fill="#1a1d23"/>
+  <g id="title-block" transform="translate(64 64)">
+    <text font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="16" letter-spacing="3" fill="#8b93a1">INTRO TO CSE · IIIT KOTTAYAM</text>
+    <text y="88" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="58" font-weight="800" fill="#f2f4f8" letter-spacing="-1">CSE Degree</text>
+    <text y="152" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="58" font-weight="800" fill="#a259ff" letter-spacing="-1">for Everyone</text>
+    <text y="206" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="26" fill="#c3c9d4">No-fluff, friendly guide to surviving</text>
+    <text y="240" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="26" fill="#c3c9d4">and thriving in computer science.</text>
+    <text y="290" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="16" fill="#ff6b35">$ read part1 &amp;&amp; read part2 &amp;&amp; …</text>
+  </g>
+  <g id="parts" transform="translate(640 44)" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">
+    <path d="M30 40 V292" stroke="#3a3f4b" stroke-width="3" stroke-dasharray="2 9" stroke-linecap="round"/>
+    <g transform="translate(0 0)"><rect x="60" width="456" height="72" rx="14" fill="#23272f" stroke="#323843"/><circle cx="30" cy="36" r="22" fill="#a259ff"/><text x="30" y="44" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">1</text><text x="84" y="32" font-size="21" font-weight="700" fill="#f2f4f8">Starting your CS journey</text><text x="84" y="56" font-size="16" fill="#8b93a1">What CS is, what you can do with it</text></g>
+    <g transform="translate(0 88)"><rect x="60" width="456" height="72" rx="14" fill="#23272f" stroke="#323843"/><circle cx="30" cy="36" r="22" fill="#a259ff"/><text x="30" y="44" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">2</text><text x="84" y="32" font-size="21" font-weight="700" fill="#f2f4f8">Getting set up</text><text x="84" y="56" font-size="16" fill="#8b93a1">Editors, CLI, Git, browsers, notes</text></g>
+    <g transform="translate(0 176)"><rect x="60" width="456" height="72" rx="14" fill="#23272f" stroke="#323843"/><circle cx="30" cy="36" r="22" fill="#a259ff"/><text x="30" y="44" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">3</text><text x="84" y="32" font-size="21" font-weight="700" fill="#f2f4f8">Finding your people + tools</text><text x="84" y="56" font-size="16" fill="#8b93a1">Communities, resources, discounts</text></g>
+    <g transform="translate(0 264)"><rect x="60" width="456" height="72" rx="14" fill="#23272f" stroke="#ff6b35"/><circle cx="30" cy="36" r="22" fill="#ff6b35"/><text x="30" y="44" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">4</text><text x="84" y="32" font-size="21" font-weight="700" fill="#f2f4f8">How to actually learn CS</text><text x="84" y="56" font-size="16" fill="#8b93a1">Learning, asking for help, year one</text></g>
+  </g>
+</svg>
