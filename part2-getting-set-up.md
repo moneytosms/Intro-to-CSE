@@ -122,6 +122,7 @@ Here are some reliable online platforms that don't require installing anything:
 - [Replit](https://replit.com/) — Full cloud editor with terminal access
 - [OnlineGDB](https://www.onlinegdb.com/) — Great for C/C++ with debugger
 - [Programiz](https://www.programiz.com/c-programming/online-compiler/) — Beginner-friendly
+- [OnlineCompiler.io](https://onlinecompiler.io/c-online-compiler) (C, C++, Python and more; reads standard input, no sign-up)
 - [Google Colab](https://colab.research.google.com/) — Python only, great for ML/data science
 
 These are perfect for:
